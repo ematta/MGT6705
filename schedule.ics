@@ -1,0 +1,486 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//MGT6705//Fall 2026 Course Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:MGT6705 Strategic Innovation and Leadership
+X-WR-TIMEZONE:America/Chicago
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+X-LIC-LOCATION:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:mgt6705-due-20260917@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20260917
+DTEND;VALUE=DATE:20260918
+SUMMARY:MGT6705 due: Week 1 discussion initial posts
+DESCRIPTION:Submit initial posts for Welcome and Introductions and Case Studies of Innovative Companies. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20260920@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+SUMMARY:MGT6705 due: Week 1 replies and checks
+DESCRIPTION:Submit replies for both Week 1 discussions. Complete Course Expectations Acknowledgement and Week 1 Knowledge Check. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20260924@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20260924
+DTEND;VALUE=DATE:20260925
+SUMMARY:MGT6705 due: Week 2 discussion initial post
+DESCRIPTION:Submit the initial post on demographics and marketplace drivers of innovation. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20260927@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20260927
+DTEND;VALUE=DATE:20260928
+SUMMARY:MGT6705 due: Week 2 assignment and checks
+DESCRIPTION:Submit discussion replies. Submit Analyzing Market Trends and Demographics. Complete Week 2 Knowledge Check. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261001@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261002
+SUMMARY:MGT6705 due: Week 3 discussion initial post
+DESCRIPTION:Submit the initial post for Analyzing Models of Innovation in Practice. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261004@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261004
+DTEND;VALUE=DATE:20261005
+SUMMARY:MGT6705 due: Week 3 assignment and checks
+DESCRIPTION:Submit discussion replies. Submit Classify Various Company Innovations into Different Types. Complete Week 3 Knowledge Check. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261008@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:MGT6705 due: Week 4 discussion initial post
+DESCRIPTION:Submit the initial post on brainstorming innovative ideas and an implementation roadmap. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261011@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20261012
+SUMMARY:MGT6705 due: Week 4 assignment and checks
+DESCRIPTION:Submit discussion replies. Submit Create an Implementation Plan for an Innovative Idea. Complete Week 4 Knowledge Check. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261015@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:MGT6705 due: Week 5 discussion initial post
+DESCRIPTION:Submit the initial post on organizational culture and innovation. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261018@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20261019
+SUMMARY:MGT6705 due: Week 5 replies and knowledge check
+DESCRIPTION:Submit discussion replies and complete Week 5 Knowledge Check. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261022@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:MGT6705 due: Week 6 discussion initial post
+DESCRIPTION:Submit the initial case study post on disruptive or reverse innovation. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261025@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261025
+DTEND;VALUE=DATE:20261026
+SUMMARY:MGT6705 due: Week 6 replies and knowledge check
+DESCRIPTION:Submit discussion replies and complete Week 6 Knowledge Check. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261029@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:MGT6705 due: Week 7 discussion initial post
+DESCRIPTION:Submit the initial post on risk and reward in customer-centric innovation. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261101@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:MGT6705 due: Week 7 assignment and checks
+DESCRIPTION:Submit discussion replies. Submit Applying Lean Startup and Design Thinking Methodologies. Complete Week 7 Knowledge Check. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261105@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:MGT6705 due: Week 8 discussion initial post
+DESCRIPTION:Submit the initial post on ethics leadership and sustainability in innovation. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261108@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261109
+SUMMARY:MGT6705 due: Week 8 assignment and checks
+DESCRIPTION:Submit discussion replies. Submit the leadership ethics or sustainability innovation analysis. Complete Week 8 Knowledge Check. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261115@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261115
+DTEND;VALUE=DATE:20261116
+SUMMARY:MGT6705 due: Course Project
+DESCRIPTION:Submit the Week 9 Course Project Executive Presentation. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-due-20261119@local
+DTSTAMP:20260824T120000Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:MGT6705 due: Week 10 final discussions
+DESCRIPTION:Submit Course Retrospective and Final Project peer review. Last day of class. The syllabus specifies the due date but not a submission time.
+CATEGORIES:Coursework,Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-zoom-20260916@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20260916T190000
+DTEND;TZID=America/Chicago:20260916T200000
+SUMMARY:MGT6705 Week 1 Zoom meeting
+DESCRIPTION:Class Zoom meeting listed in the syllabus.
+CATEGORIES:Coursework,Class
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-zoom-20260923@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20260923T190000
+DTEND;TZID=America/Chicago:20260923T200000
+SUMMARY:MGT6705 Week 2 Zoom meeting
+DESCRIPTION:Class Zoom meeting listed in the syllabus.
+CATEGORIES:Coursework,Class
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-zoom-20260930@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20260930T190000
+DTEND;TZID=America/Chicago:20260930T200000
+SUMMARY:MGT6705 Week 3 Zoom meeting
+DESCRIPTION:Class Zoom meeting listed in the syllabus.
+CATEGORIES:Coursework,Class
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-zoom-20261007@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261007T190000
+DTEND;TZID=America/Chicago:20261007T200000
+SUMMARY:MGT6705 Week 4 Zoom meeting
+DESCRIPTION:Class Zoom meeting listed in the syllabus.
+CATEGORIES:Coursework,Class
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-zoom-20261014@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261014T190000
+DTEND;TZID=America/Chicago:20261014T200000
+SUMMARY:MGT6705 Week 5 Zoom meeting
+DESCRIPTION:Class Zoom meeting listed in the syllabus.
+CATEGORIES:Coursework,Class
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-zoom-20261021@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261021T190000
+DTEND;TZID=America/Chicago:20261021T200000
+SUMMARY:MGT6705 Week 6 Zoom meeting
+DESCRIPTION:Class Zoom meeting listed in the syllabus.
+CATEGORIES:Coursework,Class
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-zoom-20261028@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261028T190000
+DTEND;TZID=America/Chicago:20261028T200000
+SUMMARY:MGT6705 Week 7 Zoom meeting
+DESCRIPTION:Class Zoom meeting listed in the syllabus.
+CATEGORIES:Coursework,Class
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-zoom-20261104@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261104T190000
+DTEND;TZID=America/Chicago:20261104T200000
+SUMMARY:MGT6705 Week 8 Zoom meeting
+DESCRIPTION:Class Zoom meeting listed in the syllabus.
+CATEGORIES:Coursework,Class
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-zoom-20261111@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261111T190000
+DTEND;TZID=America/Chicago:20261111T200000
+SUMMARY:MGT6705 Week 9 Zoom meeting
+DESCRIPTION:Class Zoom meeting listed in the syllabus.
+CATEGORIES:Coursework,Class
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20260912@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20260912T143000
+DTEND;TZID=America/Chicago:20260912T163000
+SUMMARY:MGT6705 work: Week 1 reading and setup
+DESCRIPTION:Read Managing Innovation Chapters 1-2. Review Moodle and course expectations.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20260915@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20260915T150000
+DTEND;TZID=America/Chicago:20260915T170000
+SUMMARY:MGT6705 work: Week 1 discussion drafts
+DESCRIPTION:Draft both initial discussion posts before Thursday's due date.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20260925@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20260925T150000
+DTEND;TZID=America/Chicago:20260925T170000
+SUMMARY:MGT6705 work: Week 2 assignment
+DESCRIPTION:Work on Analyzing Market Trends and Demographics. Prepare discussion replies.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20260929@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20260929T150000
+DTEND;TZID=America/Chicago:20260929T170000
+SUMMARY:MGT6705 work: Week 3 reading and post
+DESCRIPTION:Read Managing Innovation Chapter 4 and draft the discussion post.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261002@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261002T150000
+DTEND;TZID=America/Chicago:20261002T170000
+SUMMARY:MGT6705 work: Week 3 written assignment
+DESCRIPTION:Complete company innovation classifications and discussion replies.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261006@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261006T150000
+DTEND;TZID=America/Chicago:20261006T170000
+SUMMARY:MGT6705 work: Week 4 reading and ideation
+DESCRIPTION:Read The Lean Startup Part I. Outline the initial discussion post and implementation plan.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261010@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261010T150000
+DTEND;TZID=America/Chicago:20261010T180000
+SUMMARY:MGT6705 work: Week 4 implementation plan
+DESCRIPTION:Finish and review the implementation plan. Complete discussion replies and Knowledge Check.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261013@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261013T150000
+DTEND;TZID=America/Chicago:20261013T170000
+SUMMARY:MGT6705 work: Week 5 reading and post
+DESCRIPTION:Read Managing Innovation Chapters 5-6 and draft the culture discussion post.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261017@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261017T150000
+DTEND;TZID=America/Chicago:20261017T163000
+SUMMARY:MGT6705 work: Week 5 wrap-up
+DESCRIPTION:Submit discussion replies and complete the Week 5 Knowledge Check.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261020@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261020T150000
+DTEND;TZID=America/Chicago:20261020T170000
+SUMMARY:MGT6705 work: Week 6 case study draft
+DESCRIPTION:Read The Lean Startup Part II and Mastering Product Innovation Chapter 1. Draft the case study post.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261024@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261024T150000
+DTEND;TZID=America/Chicago:20261024T163000
+SUMMARY:MGT6705 work: Week 6 wrap-up
+DESCRIPTION:Complete case study replies and the Week 6 Knowledge Check.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261027@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261027T150000
+DTEND;TZID=America/Chicago:20261027T170000
+SUMMARY:MGT6705 work: Week 7 reading and post
+DESCRIPTION:Read Mastering Product Innovation Chapter 2 and draft the risk and reward discussion post.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261031@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261031T150000
+DTEND;TZID=America/Chicago:20261031T180000
+SUMMARY:MGT6705 work: Week 7 written assignment
+DESCRIPTION:Finish Applying Lean Startup and Design Thinking Methodologies. Complete replies and Knowledge Check.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261103@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261103T150000
+DTEND;TZID=America/Chicago:20261103T170000
+SUMMARY:MGT6705 work: Week 8 reading and post
+DESCRIPTION:Read Managing Innovation Chapters 7-8 and Mastering Product Innovation Chapter 2. Draft the discussion post.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261107@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261107T150000
+DTEND;TZID=America/Chicago:20261107T180000
+SUMMARY:MGT6705 work: Week 8 written assignment
+DESCRIPTION:Finish the leadership ethics or sustainability innovation analysis. Complete replies and Knowledge Check.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261110@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261110T150000
+DTEND;TZID=America/Chicago:20261110T173000
+SUMMARY:MGT6705 work: Course Project development
+DESCRIPTION:Develop the Week 9 Executive Presentation. Check project requirements in Moodle.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261114@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261114T150000
+DTEND;TZID=America/Chicago:20261114T180000
+SUMMARY:MGT6705 work: Course Project final review
+DESCRIPTION:Finalize and submit the Executive Presentation before Sunday's due date.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261117@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261117T150000
+DTEND;TZID=America/Chicago:20261117T170000
+SUMMARY:MGT6705 work: Week 10 retrospective
+DESCRIPTION:Draft the Course Retrospective and begin the Final Project peer review.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:mgt6705-work-20261119@local
+DTSTAMP:20260824T120000Z
+DTSTART;TZID=America/Chicago:20261119T150000
+DTEND;TZID=America/Chicago:20261119T163000
+SUMMARY:MGT6705 work: Final submission check
+DESCRIPTION:Review and submit the Course Retrospective and Final Project peer review.
+CATEGORIES:Coursework,Study
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
