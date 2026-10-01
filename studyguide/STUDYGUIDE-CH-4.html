@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 4 Study Guide - Managing Innovation</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #5d687b;
+      --accent: #3157d5;
+      --accent-2: #e9efff;
+      --border: #dfe5ef;
+      --good: #176a46;
+      --warn: #8a5a00;
+      --shadow: 0 12px 30px rgba(30, 48, 80, 0.08);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a { color: var(--accent); }
+
+    .hero {
+      background: linear-gradient(135deg, #172a63, #3157d5);
+      color: #fff;
+      padding: 56px 24px 44px;
+    }
+
+    .hero-inner, .layout {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 8px 0 10px;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.08;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: 0;
+      color: rgba(255,255,255,0.88);
+      font-size: 1.06rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      gap: 28px;
+      padding: 28px 20px 64px;
+      align-items: start;
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      max-height: calc(100vh - 36px);
+      overflow: auto;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+    }
+
+    .toc a {
+      display: block;
+      text-decoration: none;
+      color: var(--muted);
+      padding: 7px 8px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+    }
+
+    .toc a:hover {
+      background: var(--accent-2);
+      color: var(--accent);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 22px;
+      scroll-margin-top: 18px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.55rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.08rem;
+    }
+
+    p { margin: 10px 0; }
+
+    ul, ol {
+      padding-left: 1.3rem;
+    }
+
+    li { margin: 6px 0; }
+
+    .callout {
+      background: var(--accent-2);
+      border-left: 4px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 10px;
+      margin: 14px 0;
+    }
+
+    .key {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--accent-2);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .mini-card {
+      border: 1px solid var(--border);
+      background: #fbfcff;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .mini-card h3 {
+      margin-top: 0;
+      color: #233a85;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 14px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+      font-size: 0.94rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 11px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #f0f4ff;
+      color: #233a85;
+    }
+
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin: 12px 0;
+    }
+
+    .flow span {
+      background: #f0f4ff;
+      border: 1px solid #cfdbff;
+      color: #233a85;
+      padding: 8px 11px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .arrow {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fbfcff;
+      margin: 10px 0;
+      padding: 12px 14px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #233a85;
+    }
+
+    .flashcards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .flashcard {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fbfcff;
+    }
+
+    .flashcard strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #233a85;
+    }
+
+    .exam-box {
+      border: 2px solid #cad6ff;
+      background: linear-gradient(180deg, #f8faff, #eef3ff);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .footer {
+      max-width: 1180px;
+      margin: 0 auto 36px;
+      padding: 0 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .print-btn {
+      border: 0;
+      background: #fff;
+      color: #233a85;
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: relative; top: auto; max-height: none; }
+      .grid, .flashcards { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .hero { padding: 28px 0; }
+      .layout { display: block; padding: 0; }
+      .toc, .print-btn { display: none; }
+      section { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Chapter 4 Study Guide</div>
+      <h1>Managing Innovation Strategy</h1>
+      <p>
+        Based on your Chapter 4 highlights from <em>Managing Innovation: Integrating Technological,
+        Market and Organizational Change</em> by Joe Tidd and John R. Bessant.
+        This guide focuses on strategy under uncertainty, competitive positioning, capabilities,
+        appropriating value, technological trajectories, competencies, global R&amp;D, and strategy deployment.
+      </p>
+      <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <a href="#big-picture">1. Big Picture</a>
+      <a href="#rationalist">2. Rationalist vs. Incrementalist</a>
+      <a href="#rd-patterns">3. Innovation Strategy Patterns</a>
+      <a href="#lead-follow">4. Leadership vs. Followership</a>
+      <a href="#porter">5. Limits of Porter</a>
+      <a href="#dynamic">6. Dynamic Capabilities</a>
+      <a href="#appropriation">7. Appropriating Value</a>
+      <a href="#sectors">8. Sector Differences</a>
+      <a href="#trajectories">9. Technological Trajectories</a>
+      <a href="#competencies">10. Core & Distributed Competencies</a>
+      <a href="#global-rd">11. Global R&amp;D</a>
+      <a href="#deployment">12. Strategy Deployment</a>
+      <a href="#portfolio">13. Strategic Portfolios</a>
+      <a href="#systems">14. National Systems & Value Chains</a>
+      <a href="#glossary">15. Key Terms</a>
+      <a href="#exam">16. Exam Review</a>
+      <a href="#questions">17. Practice Questions</a>
+      <a href="#flashcards">18. Flashcards</a>
+    </nav>
+
+    <main>
+      <section id="big-picture">
+        <h2>1. Big Picture</h2>
+        <p>
+          Chapter 4 treats innovation strategy as something more complicated than choosing a plan and then executing it.
+          Firms operate in environments that are complex and fast-changing, so innovation strategy must combine analysis,
+          deliberate choices, learning, adaptation, internal organization, resource use, and attention to external conditions.
+        </p>
+
+        <div class="grid">
+          <div class="mini-card">
+            <h3>What strategy tries to manage</h3>
+            <ul>
+              <li>Intended and emergent initiatives</li>
+              <li>Internal practices, structures, processes, and behavior</li>
+              <li>Governance and senior management</li>
+              <li>Capabilities, knowledge, assets, and finance</li>
+              <li>Growth, returns, performance, and advantage</li>
+              <li>Markets, competition, industry, uncertainty, and contingency</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h3>Central message</h3>
+            <p>
+              The clean separation between <strong>strategy choice</strong> and <strong>strategy implementation</strong>
+              breaks down in uncertain environments. Firms must learn while acting and adjust as new evidence appears.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>Study takeaway:</strong> Innovation strategy is not just a plan. It is an ongoing process of analysis,
+          choice, action, learning, and adjustment.
+        </div>
+      </section>
+
+      <section id="rationalist">
+        <h2>2. Rationalist vs. Incrementalist Strategy</h2>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Dimension</th>
+                <th>Rationalist</th>
+                <th>Incrementalist</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Basic logic</td>
+                <td>Analyze the environment, choose a course of action, then execute it.</td>
+                <td>Take deliberate steps, evaluate results, then adjust the goal or next action.</td>
+              </tr>
+              <tr>
+                <td>Model</td>
+                <td><strong>Appraise → Determine → Act</strong></td>
+                <td><strong>Act → Measure → Learn → Adjust</strong></td>
+              </tr>
+              <tr>
+                <td>Corporate tool</td>
+                <td>SWOT analysis</td>
+                <td>Trial-and-error learning, testing, iterative adjustment</td>
+              </tr>
+              <tr>
+                <td>View of uncertainty</td>
+                <td>Assumes enough understanding can be developed to choose a direction.</td>
+                <td>Assumes full understanding and prediction are impossible in complex environments.</td>
+              </tr>
+              <tr>
+                <td>Strength</td>
+                <td>Supports long-term focus, coherence, and awareness of competitive trends.</td>
+                <td>Supports adaptation when information is incomplete and conditions change.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Rationalist sequence</h3>
+        <div class="flow">
+          <span>Describe &amp; analyze environment</span><b class="arrow">→</b>
+          <span>Determine course of action</span><b class="arrow">→</b>
+          <span>Carry it out</span>
+        </div>
+
+        <h3>Incrementalist sequence</h3>
+        <div class="flow">
+          <span>Take a deliberate step</span><b class="arrow">→</b>
+          <span>Measure effects</span><b class="arrow">→</b>
+          <span>Adjust objective / next step</span><b class="arrow">→</b>
+          <span>Repeat</span>
+        </div>
+
+        <h3>Managerial implications</h3>
+        <ul>
+          <li>Treat corporate strategy as a form of organizational learning.</li>
+          <li>Explore multiple possible future trends.</li>
+          <li>Use broad participation and informal communication channels.</li>
+          <li>Use multiple information sources and encourage debate and skepticism.</li>
+          <li>Expect strategies to change when new or unexpected evidence appears.</li>
+          <li>Do not assume a successful management practice can be copied exactly into a new context.</li>
+          <li>Critically examine evidence and compare the original context with the new firm, industry, technology, and country.</li>
+        </ul>
+
+        <div class="callout">
+          <strong>Important nuance:</strong> The notes argue that under uncertainty, an incrementalist approach can actually
+          be more rational because it avoids pretending that managers can fully predict a complex future.
+        </div>
+      </section>
+
+      <section id="rd-patterns">
+        <h2>3. Patterns of Effective Innovation Strategy</h2>
+        <p>
+          Companies that consistently leverage R&amp;D spending share two broad characteristics:
+          <strong>alignment between innovation and corporate strategy</strong> and
+          <strong>close attention to customer and market needs</strong>.
+        </p>
+
+        <div class="grid">
+          <div class="mini-card">
+            <h3>Technology Drivers</h3>
+            <p>
+              Scout and develop new technologies, then match them to unmet needs. Strong project and risk management are important.
+            </p>
+          </div>
+          <div class="mini-card">
+            <h3>Need Seekers</h3>
+            <p>
+              Aim to be first to market by identifying emerging customer needs. Strong design and product development capabilities matter.
+            </p>
+          </div>
+          <div class="mini-card">
+            <h3>Market Readers</h3>
+            <p>
+              Aim to be fast followers. They emphasize competitor analysis and strong process innovation.
+            </p>
+          </div>
+          <div class="mini-card">
+            <h3>No Single Best Strategy</h3>
+            <p>
+              The chapter does not present one universal optimum. Good practice depends on context, capabilities, markets, and uncertainty.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="lead-follow">
+        <h2>4. Innovation Leadership vs. Followership</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Strategy</th>
+                <th>Goal</th>
+                <th>Requirements</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Innovation leadership</strong></td>
+                <td>Be first to market through technological leadership.</td>
+                <td>Creativity, risk-taking, links to new knowledge, and close contact with customer needs and reactions.</td>
+              </tr>
+              <tr>
+                <td><strong>Innovation followership</strong></td>
+                <td>Enter later and learn from technological leaders.</td>
+                <td>Competitor intelligence, reverse engineering, cost cutting, and manufacturing learning.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Late entrants may compete through strengths outside R&amp;D, such as superior distribution, promotion, or support.
+          Another route is to launch major new product development projects that challenge the pioneer directly.
+        </p>
+
+        <div class="callout">
+          <strong>Do not assume first-mover status automatically creates advantage.</strong>
+          The notes later point out that in radically new products, user-valued features may still be unclear.
+        </div>
+      </section>
+
+      <section id="porter">
+        <h2>5. Limits of Porter-Style Industry Analysis</h2>
+        <p>The notes criticize static industry frameworks in several ways:</p>
+        <ul>
+          <li>They can underestimate how strongly technological change transforms industry structures.</li>
+          <li>They can overestimate management's ability to deliberately choose and implement innovation strategy.</li>
+          <li>They may understate technological trajectories and firm-specific technological and organizational competencies.</li>
+          <li>Existing product bases and competencies shape the technologies and sectors a firm can realistically enter.</li>
+          <li>Firms and technologies do not always fit neatly into fixed industry boundaries.</li>
+          <li>Technology can create profitable opportunities even in mature sectors.</li>
+          <li>Implementation, organizational learning, and adaptation deserve more attention.</li>
+        </ul>
+
+        <div class="callout">
+          <strong>Study takeaway:</strong> Innovation strategy must account for technological change and the firm's accumulated
+          capabilities, not just its current competitive position in a static industry.
+        </div>
+      </section>
+
+      <section id="dynamic">
+        <h2>6. Dynamic Capabilities</h2>
+        <p>
+          Dynamic capabilities emphasize the shifting environment and the role of strategic management in
+          <strong>adapting, integrating, and reconfiguring</strong> internal and external skills, resources, and functional competencies.
+        </p>
+
+        <h3>For a capability to be strategic</h3>
+        <ul>
+          <li>It must be connected to a user need.</li>
+          <li>It must be unique enough to support differentiation.</li>
+          <li>It must be difficult to replicate.</li>
+        </ul>
+
+        <h3>Processes, Position, and Paths</h3>
+        <div class="grid">
+          <div class="mini-card">
+            <h3>Processes</h3>
+            <p>How things are done in the firm: routines, current practices, and learning patterns.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Position</h3>
+            <p>The firm's current technology, intellectual property, customer base, and supplier relationships.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Paths</h3>
+            <p>The strategic alternatives available and the attractiveness of future opportunities.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Dynamic capability</h3>
+            <p>The ability to adapt, innovate, and renew as conditions change.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <strong>Memory hook:</strong> <strong>P-P-P = Processes, Position, Paths.</strong>
+        </div>
+      </section>
+
+      <section id="appropriation">
+        <h2>7. Appropriating Value from Innovation</h2>
+        <p>
+          According to the notes on Teece, firms benefit from technology when they can:
+          <strong>(1) turn technological advantage into commercially viable products or processes</strong> and
+          <strong>(2) defend that advantage against imitators</strong>.
+        </p>
+
+        <h3>Nine factors affecting commercial benefit</h3>
+        <ol>
+          <li><strong>Secrecy</strong> - especially useful for process innovations.</li>
+          <li><strong>Accumulated tacit knowledge</strong> - difficult to copy when deeply embedded in firms or regions.</li>
+          <li><strong>Lead times and after-sales service</strong> - important protection for product innovations.</li>
+          <li><strong>Learning curve</strong> - can lower cost and build difficult-to-copy tacit knowledge.</li>
+          <li><strong>Complementary assets</strong> - production, marketing, and after-sales capabilities needed to commercialize technology.</li>
+          <li><strong>Product complexity</strong> - can affect how easily innovations are understood or copied.</li>
+          <li><strong>Standards</strong> - widespread adoption can expand markets and create barriers.</li>
+          <li><strong>Pioneering radical new products</strong> - first-mover advantage is not guaranteed when user preferences are still unclear.</li>
+          <li><strong>Patent protection</strong> - can strongly influence the balance of benefits between innovators and imitators.</li>
+        </ol>
+
+        <h3>How advantage changes across market development</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Phase</th>
+                <th>Most important factors in the notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Technical feasibility</td>
+                <td>Technological superiority, complementary assets, firm credibility, other firms, and appropriability regime.</td>
+              </tr>
+              <tr>
+                <td>Creating a market</td>
+                <td>Strategic maneuvering and regulation.</td>
+              </tr>
+              <tr>
+                <td>Decisive phase</td>
+                <td>Installed base, complementary assets, credibility, switching costs, and network effects.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout">
+          <strong>Remember:</strong> In the notes, imitation is described as costly and time-consuming rather than free.
+          Protecting innovation is a combination of legal, organizational, knowledge, timing, service, and market mechanisms.
+        </div>
+      </section>
+
+      <section id="sectors">
+        <h2>8. Innovation Differs by Industrial Sector</h2>
+        <p>
+          The sources and directions of technological change vary persistently by sector. The notes highlight differences in:
+        </p>
+        <ul>
+          <li><strong>Size of innovating firms:</strong> larger in chemicals, vehicles, materials processing, aircraft, and electronics; smaller in machinery, instruments, and software.</li>
+          <li><strong>Basis of competition:</strong> price-sensitive in bulk materials and consumer products; performance-sensitive in ethical drugs and machinery.</li>
+          <li><strong>Objectives of innovation:</strong> product innovation in ethical drugs and machinery; process innovation in steel; both product and process innovation in automobiles.</li>
+          <li><strong>Sources of innovation:</strong> suppliers, customers, in-house technological activities, or basic research depending on the sector.</li>
+          <li><strong>Locus of innovation:</strong> R&amp;D labs, production engineering, design offices, or systems departments depending on the industry.</li>
+        </ul>
+
+        <div class="callout">
+          <strong>Study takeaway:</strong> Innovation strategy should fit the technological and competitive characteristics of the sector.
+        </div>
+      </section>
+
+      <section id="trajectories">
+        <h2>9. Five Major Technological Trajectories</h2>
+        <p>Your notes list five broad technological trajectories. Use them as a classification framework.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Trajectory</th>
+                <th>Typical areas / examples from notes</th>
+                <th>Main sources of technology</th>
+                <th>Strategic emphasis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Supplier dominated</strong></td>
+                <td>Agriculture, services, traditional manufacture</td>
+                <td>Suppliers</td>
+                <td>Use technology to strengthen nontechnological advantages; flexible response to users.</td>
+              </tr>
+              <tr>
+                <td><strong>Scale intensive</strong></td>
+                <td>Bulk materials, consumer durables, automobiles, civil engineering</td>
+                <td>Production learning, production engineering</td>
+                <td>Cost-effective, safe, complex products/processes; diffuse best practice and integrate new knowledge incrementally.</td>
+              </tr>
+              <tr>
+                <td><strong>Science based</strong></td>
+                <td>Electronics, chemicals</td>
+                <td>R&amp;D and basic research</td>
+                <td>Develop technically related products, exploit basic science, obtain complementary assets.</td>
+              </tr>
+              <tr>
+                <td><strong>Information intensive</strong></td>
+                <td>Finance, retailing, publishing, travel</td>
+                <td>Software and systems departments</td>
+                <td>Create new products/services and design complex information-processing systems.</td>
+              </tr>
+              <tr>
+                <td><strong>Specialized suppliers</strong></td>
+                <td>Machinery, instruments, software</td>
+                <td>Suppliers, design, advanced users</td>
+                <td>Match changing technologies to user needs and maintain strong links with lead users.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="competencies">
+        <h2>10. Core Competencies, Distributed Competencies, and Core Rigidities</h2>
+
+        <h3>Hamel and Prahalad's core competency idea</h3>
+        <p>
+          Sustainable advantage resides less in individual products and more in a firm's ability to consolidate technologies
+          and production skills into competencies that help businesses adapt to changing opportunities.
+        </p>
+
+        <div class="grid">
+          <div class="mini-card">
+            <h3>Tree metaphor</h3>
+            <ul>
+              <li><strong>Roots:</strong> Core competencies</li>
+              <li><strong>Trunk / major limbs:</strong> Core products</li>
+              <li><strong>Smaller branches:</strong> Business units</li>
+              <li><strong>Leaves / flowers / fruit:</strong> End products</li>
+            </ul>
+          </div>
+          <div class="mini-card">
+            <h3>Examples in the notes</h3>
+            <ul>
+              <li>Apple: design</li>
+              <li>Amazon: logistics</li>
+              <li>3M: coatings and adhesives</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Characteristics of core competencies</h3>
+        <ul>
+          <li>They can feed more than one core product and more than one business unit.</li>
+          <li>They include organizational capabilities such as communication, involvement, and working across boundaries.</li>
+          <li>They require focus rather than an excessively long list of capabilities.</li>
+          <li>They make the cumulative development of firm-specific technological competencies central to strategy.</li>
+        </ul>
+
+        <h3>Limitations and cautions</h3>
+        <ul>
+          <li>Core competencies do not necessarily support diversification equally across all industries.</li>
+          <li>Large, multi-technology firms may need many technological competencies rather than only a few.</li>
+          <li><strong>Distributed competencies</strong> may be a better description when capabilities are spread across technologies, organizational locations, and strategic objectives.</li>
+          <li><strong>Core rigidities</strong> occur when established strengths become too dominant and make adaptation harder.</li>
+          <li>There is no widely accepted definition or measurement method for competencies.</li>
+        </ul>
+
+        <h3>Routine</h3>
+        <p>
+          A routine is an organizational behavior that is highly patterned, learned, partly based on tacit knowledge,
+          goal-directed, and repetitive.
+        </p>
+
+        <div class="callout">
+          <strong>Exam connection:</strong> A competency can create advantage, but the same competency can become a rigidity
+          if the organization becomes too dependent on it.
+        </div>
+      </section>
+
+      <section id="global-rd">
+        <h2>11. Organizing Innovation and R&amp;D Globally</h2>
+        <p>
+          The notes describe two polar approaches to organizing global innovation:
+          <strong>specialization-based structures</strong> and <strong>integration-based / network structures</strong>.
+        </p>
+
+        <h3>Factors influencing where R&amp;D is located</h3>
+        <ol>
+          <li>Availability of critical competencies for the project.</li>
+          <li>International credibility of the R&amp;D manager responsible.</li>
+          <li>Importance of external technical and market knowledge, including suppliers and customers.</li>
+          <li>Importance and cost of internal transactions, such as engineering-to-production coordination.</li>
+          <li>Cost and disruption of relocating key personnel.</li>
+        </ol>
+      </section>
+
+      <section id="deployment">
+        <h2>12. Strategic Analysis, Choice, Monitoring, and Deployment</h2>
+        <p>Organizations use routines and frameworks to answer three central strategy questions:</p>
+
+        <div class="grid">
+          <div class="mini-card">
+            <h3>Strategic Analysis</h3>
+            <p><strong>What, realistically, could we do?</strong></p>
+          </div>
+          <div class="mini-card">
+            <h3>Strategic Choice</h3>
+            <p><strong>What are we going to do, and what will we leave out?</strong></p>
+          </div>
+          <div class="mini-card">
+            <h3>Strategic Monitoring</h3>
+            <p><strong>Is this still what we want to do over time?</strong></p>
+          </div>
+          <div class="mini-card">
+            <h3>Strategy Deployment</h3>
+            <p>Communicate and enable people to use the framework, avoiding "know-how" without "know-why."</p>
+          </div>
+        </div>
+
+        <h3>Deployment tools named in the notes</h3>
+        <ul>
+          <li>Hoshin (participative) planning</li>
+          <li>How-why charts</li>
+          <li>Bowling charts</li>
+          <li>Briefing groups</li>
+        </ul>
+
+        <div class="callout">
+          <strong>Memory hook:</strong> <strong>Analyze → Choose → Monitor → Deploy.</strong>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <h2>13. Building a Strategic Innovation Portfolio</h2>
+        <p>The notes identify three approaches:</p>
+        <div class="grid">
+          <div class="mini-card">
+            <h3>Benefit Measurement</h3>
+            <p>Usually relies on relatively simple subjective judgments.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Economic Models</h3>
+            <p>Bring financial or other quantitative data into the decision.</p>
+          </div>
+          <div class="mini-card">
+            <h3>Portfolio Models</h3>
+            <p>Review a set of projects together and seek balance across the portfolio.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="systems">
+        <h2>14. National Systems of Innovation and International Value Chains</h2>
+        <p>
+          Firms are embedded in national systems and international value chains that shape demand, competition,
+          human resources, governance, opportunities, and constraints. These systems influence strategy but do not completely determine it.
+        </p>
+
+        <h3>Learning and absorptive capacity</h3>
+        <p>
+          Learning from competitors and external sources is essential, but firms need investment in R&amp;D, training,
+          and skill development to build the <strong>absorptive capacity</strong> required to assimilate outside knowledge.
+        </p>
+
+        <h3>Resources vs. capabilities</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Concept</th>
+                <th>Meaning in the notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Resources</strong></td>
+                <td>Tangible or intangible assets such as plant, equipment, location, employee skills, and intellectual property.</td>
+              </tr>
+              <tr>
+                <td><strong>Capabilities</strong></td>
+                <td>Rare combinations of resources that are functional, difficult to imitate, and able to create value.</td>
+              </tr>
+              <tr>
+                <td><strong>Dynamic capabilities</strong></td>
+                <td>Capabilities that help organizations adapt, innovate, and renew under uncertainty and over the long term.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Management can strengthen innovation by investing in complementary assets such as production, marketing,
+          service, and support. The ability to appropriate returns is also affected by factors such as intellectual property
+          and international trading regimes, some of which are outside management's direct control.
+        </p>
+      </section>
+
+      <section id="glossary">
+        <h2>15. Key Terms to Know</h2>
+        <div class="flashcards">
+          <div class="flashcard"><strong>Rationalist strategy</strong>Analyze, choose, then act.</div>
+          <div class="flashcard"><strong>Incrementalist strategy</strong>Act in deliberate steps, evaluate, learn, and adjust.</div>
+          <div class="flashcard"><strong>Dynamic capabilities</strong>Ability to adapt, integrate, reconfigure, innovate, and renew as conditions change.</div>
+          <div class="flashcard"><strong>Appropriation</strong>Capturing commercial benefit from innovation while defending it from imitation.</div>
+          <div class="flashcard"><strong>Complementary assets</strong>Production, marketing, service, or other assets needed to commercialize technology.</div>
+          <div class="flashcard"><strong>Tacit knowledge</strong>Accumulated knowledge that is difficult to codify and imitate.</div>
+          <div class="flashcard"><strong>Core competency</strong>A firm-specific technological or production capability that can support multiple products or businesses.</div>
+          <div class="flashcard"><strong>Distributed competencies</strong>Competencies spread across technologies, locations, departments, and strategic goals.</div>
+          <div class="flashcard"><strong>Core rigidity</strong>An established strength that becomes so dominant it limits adaptation.</div>
+          <div class="flashcard"><strong>Routine</strong>A patterned, learned, repetitive organizational behavior partly based on tacit knowledge.</div>
+          <div class="flashcard"><strong>Absorptive capacity</strong>The ability to assimilate and use knowledge from external sources.</div>
+          <div class="flashcard"><strong>Strategic portfolio</strong>A balanced set of innovation projects evaluated through benefit, economic, or portfolio methods.</div>
+        </div>
+      </section>
+
+      <section id="exam">
+        <h2>16. Exam Review: What to Remember First</h2>
+        <div class="exam-box">
+          <ol>
+            <li><strong>Uncertainty changes strategy.</strong> Firms cannot fully predict complex, fast-changing environments.</li>
+            <li><strong>Incremental learning matters.</strong> Deliberate steps, measurement, learning, and adjustment can outperform rigid planning.</li>
+            <li><strong>There is no universal innovation strategy.</strong> Technology drivers, need seekers, and market readers can all succeed under different conditions.</li>
+            <li><strong>First mover is not automatically best.</strong> Leaders and followers need different capabilities, and radical markets may be unclear early on.</li>
+            <li><strong>Capabilities matter as much as market position.</strong> Processes, positions, and paths shape what a firm can do.</li>
+            <li><strong>Innovation must be commercialized and protected.</strong> Complementary assets, tacit knowledge, lead time, standards, patents, and other mechanisms help firms capture value.</li>
+            <li><strong>Industry context matters.</strong> Sources, objectives, and locations of innovation vary by sector.</li>
+            <li><strong>Core competencies can become core rigidities.</strong> Strengths need renewal and adaptation.</li>
+            <li><strong>Strategy requires deployment.</strong> Analysis and choice are not enough; people need to understand both know-how and know-why.</li>
+            <li><strong>Firms are embedded in larger innovation systems.</strong> National systems and value chains influence opportunities, constraints, learning, and capability development.</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="questions">
+        <h2>17. Practice Questions</h2>
+
+        <details>
+          <summary>1. Why does the chapter question a purely rationalist approach to innovation strategy?</summary>
+          <p>
+            Because firms operate in complex, fast-changing environments where managers cannot fully understand the present
+            or reliably predict the future. Incremental learning and adjustment are therefore necessary.
+          </p>
+        </details>
+
+        <details>
+          <summary>2. What is the basic sequence of incrementalist strategy?</summary>
+          <p>Take a deliberate step, measure and evaluate the effect, adjust the objective or next step, then repeat.</p>
+        </details>
+
+        <details>
+          <summary>3. What two characteristics are associated with firms that leverage R&amp;D spending effectively?</summary>
+          <p>Strong alignment between innovation and corporate strategy, plus close attention to customer and market needs.</p>
+        </details>
+
+        <details>
+          <summary>4. Compare technology drivers, need seekers, and market readers.</summary>
+          <p>
+            Technology drivers develop technologies and match them to unmet needs; need seekers identify emerging customer needs
+            and aim to be first; market readers follow quickly using competitor analysis and process innovation.
+          </p>
+        </details>
+
+        <details>
+          <summary>5. How does innovation followership differ from innovation leadership?</summary>
+          <p>
+            Leadership seeks first-to-market advantage through technological leadership, creativity, risk-taking, and customer links.
+            Followership enters later and relies more on learning from leaders, competitor analysis, reverse engineering, cost reduction,
+            and manufacturing learning.
+          </p>
+        </details>
+
+        <details>
+          <summary>6. What are processes, position, and paths?</summary>
+          <p>
+            Processes are routines and ways of working; position is the firm's current technology, IP, customers, and supplier relationships;
+            paths are the future strategic alternatives available to the firm.
+          </p>
+        </details>
+
+        <details>
+          <summary>7. What are the two broad requirements for appropriating value from technology?</summary>
+          <p>
+            Turn technological advantage into commercially viable products or processes, and defend the advantage against imitators.
+          </p>
+        </details>
+
+        <details>
+          <summary>8. Name at least five factors that help firms benefit commercially from technology.</summary>
+          <p>
+            Any five from: secrecy, accumulated tacit knowledge, lead times and after-sales service, learning curve,
+            complementary assets, product complexity, standards, pioneering radical new products, and patent protection.
+          </p>
+        </details>
+
+        <details>
+          <summary>9. Why can a core competency become a problem?</summary>
+          <p>
+            If it becomes too dominant, it may turn into a core rigidity that makes the firm less able to adapt to changing technologies or opportunities.
+          </p>
+        </details>
+
+        <details>
+          <summary>10. What are the three strategy framework questions?</summary>
+          <p>
+            Strategic analysis: What could we do? Strategic choice: What are we going to do and what will we leave out?
+            Strategic monitoring: Is this still what we want to do?
+          </p>
+        </details>
+
+        <details>
+          <summary>11. How are resources different from capabilities?</summary>
+          <p>
+            Resources are tangible or intangible assets. Capabilities are rare, functional combinations of resources that are difficult to imitate and create value.
+          </p>
+        </details>
+
+        <details>
+          <summary>12. Why is absorptive capacity important?</summary>
+          <p>
+            Learning from competitors and external knowledge sources requires the ability to assimilate that knowledge,
+            which depends on investments in R&amp;D, training, and skills.
+          </p>
+        </details>
+      </section>
+
+      <section id="flashcards">
+        <h2>18. Rapid-Review Flashcards</h2>
+        <details>
+          <summary>Rationalist strategy?</summary>
+          <p>Appraise → determine → act.</p>
+        </details>
+        <details>
+          <summary>Incrementalist strategy?</summary>
+          <p>Step → measure → adjust → repeat.</p>
+        </details>
+        <details>
+          <summary>Three good-practice innovation strategy clusters?</summary>
+          <p>Technology drivers, need seekers, market readers.</p>
+        </details>
+        <details>
+          <summary>Three strategic dimensions of the firm?</summary>
+          <p>Processes, position, paths.</p>
+        </details>
+        <details>
+          <summary>Two requirements for appropriating technology benefits?</summary>
+          <p>Commercialize the technological advantage and defend it from imitators.</p>
+        </details>
+        <details>
+          <summary>Five technological trajectories?</summary>
+          <p>Supplier dominated, scale intensive, science based, information intensive, specialized suppliers.</p>
+        </details>
+        <details>
+          <summary>What can a core competency become?</summary>
+          <p>A core rigidity if it becomes too dominant.</p>
+        </details>
+        <details>
+          <summary>Three innovation portfolio approaches?</summary>
+          <p>Benefit measurement, economic models, portfolio models.</p>
+        </details>
+        <details>
+          <summary>Three strategy questions?</summary>
+          <p>What could we do? What will we do? Is this still what we want to do?</p>
+        </details>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    Prepared from the supplied Chapter 4 Kindle highlights only. No outside research was added.
+  </footer>
+</body>
+</html>

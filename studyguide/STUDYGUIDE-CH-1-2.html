@@ -1,0 +1,1393 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Study guide for Managing Innovation: Integrating Technological, Market and Organizational Change by Tidd and Bessant."
+    />
+    <title>Managing Innovation | Study Guide</title>
+    <style>
+      :root {
+        --ink: #17212b;
+        --muted: #5c6b79;
+        --paper: #f4f7f8;
+        --panel: #ffffff;
+        --rule: #d7e0e5;
+        --chapter-one: #176b87;
+        --chapter-one-deep: #0c4258;
+        --chapter-one-pale: #e4f2f6;
+        --chapter-two: #a94e11;
+        --chapter-two-deep: #6f3008;
+        --chapter-two-pale: #fff0df;
+        --gold: #f3c969;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .masthead {
+        color: #fff;
+        background: var(--ink);
+        border-bottom: 6px solid var(--gold);
+        padding: 4.5rem 1.5rem 3.25rem;
+      }
+
+      .masthead-inner,
+      main,
+      footer {
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+
+      .eyebrow,
+      .chapter-label,
+      .kicker,
+      th,
+      .tag,
+      .prompt-number {
+        font-family: "Arial Narrow", Arial, sans-serif;
+        font-size: 0.73rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow {
+        color: var(--gold);
+        margin: 0 0 0.75rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 800px;
+        margin-bottom: 1rem;
+        font-size: clamp(2.4rem, 7vw, 5.4rem);
+        font-weight: 400;
+        letter-spacing: -0.055em;
+        line-height: 0.93;
+      }
+
+      .subtitle {
+        max-width: 640px;
+        margin-bottom: 0;
+        color: #c7d3db;
+        font-size: 1.1rem;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        display: flex;
+        gap: 0.4rem;
+        overflow-x: auto;
+        padding: 0.75rem max(1rem, calc((100% - 1120px) / 2));
+        background: rgba(244, 247, 248, 0.95);
+        border-bottom: 1px solid var(--rule);
+        backdrop-filter: blur(10px);
+      }
+
+      nav a {
+        flex: 0 0 auto;
+        padding: 0.4rem 0.65rem;
+        color: var(--muted);
+        font-family: Arial, sans-serif;
+        font-size: 0.83rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      nav a:hover,
+      nav a:focus-visible {
+        color: var(--ink);
+        background: #fff;
+        outline: 2px solid currentColor;
+        outline-offset: -2px;
+      }
+
+      main {
+        padding: 2.75rem 1.5rem 4rem;
+      }
+
+      .quick-start {
+        display: grid;
+        grid-template-columns: 1.05fr 1.95fr;
+        gap: 2rem;
+        align-items: start;
+        padding: 1.5rem 0 3rem;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .quick-start h2 {
+        margin-bottom: 0.4rem;
+        font-size: 1.65rem;
+        line-height: 1.05;
+      }
+      .quick-start p {
+        color: var(--muted);
+      }
+
+      .study-method {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        overflow: hidden;
+        background: var(--rule);
+        border: 1px solid var(--rule);
+      }
+
+      .study-method div {
+        padding: 1rem;
+        background: var(--panel);
+      }
+      .study-method strong {
+        display: block;
+        margin-bottom: 0.2rem;
+        font-family: Arial, sans-serif;
+        font-size: 0.9rem;
+      }
+      .study-method span {
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.35;
+      }
+
+      .chapter {
+        margin-top: 4rem;
+        scroll-margin-top: 3.75rem;
+      }
+
+      .chapter-heading {
+        display: grid;
+        grid-template-columns: 122px 1fr;
+        gap: 1.5rem;
+        align-items: end;
+        padding-bottom: 1.5rem;
+        border-bottom: 4px solid;
+      }
+
+      .chapter-one .chapter-heading {
+        border-color: var(--chapter-one);
+      }
+      .chapter-two .chapter-heading {
+        border-color: var(--chapter-two);
+      }
+
+      .chapter-number {
+        font-family: Arial, sans-serif;
+        font-size: 5.5rem;
+        font-weight: 800;
+        letter-spacing: -0.1em;
+        line-height: 0.78;
+      }
+
+      .chapter-one .chapter-number,
+      .chapter-one .chapter-label {
+        color: var(--chapter-one);
+      }
+      .chapter-two .chapter-number,
+      .chapter-two .chapter-label {
+        color: var(--chapter-two);
+      }
+      .chapter-label {
+        margin-bottom: 0.3rem;
+      }
+
+      .chapter-heading h2 {
+        margin-bottom: 0.2rem;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 400;
+        letter-spacing: -0.045em;
+        line-height: 0.98;
+      }
+      .chapter-heading p {
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .chapter-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.85fr);
+        gap: 2.5rem;
+        padding-top: 2rem;
+      }
+      .chapter-grid > * {
+        min-width: 0;
+      }
+
+      h3 {
+        margin: 2.25rem 0 0.65rem;
+        font-family: Arial, sans-serif;
+        font-size: 1.05rem;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+      .chapter-grid h3:first-child {
+        margin-top: 0;
+      }
+
+      .lead {
+        font-size: 1.25rem;
+        line-height: 1.5;
+      }
+      .key-line {
+        padding: 1.1rem 1.25rem;
+        border-left: 5px solid;
+        font-size: 1.15rem;
+      }
+      .chapter-one .key-line {
+        background: var(--chapter-one-pale);
+        border-color: var(--chapter-one);
+      }
+      .chapter-two .key-line {
+        background: var(--chapter-two-pale);
+        border-color: var(--chapter-two);
+      }
+
+      .callout {
+        padding: 1.25rem 1.35rem;
+        background: var(--panel);
+        border: 1px solid var(--rule);
+      }
+      .callout + .callout {
+        margin-top: 1rem;
+      }
+      .callout h3 {
+        margin-top: 0;
+      }
+      .callout p:last-child,
+      .callout ul:last-child {
+        margin-bottom: 0;
+      }
+
+      ul,
+      ol {
+        padding-left: 1.25rem;
+      }
+      li + li {
+        margin-top: 0.45rem;
+      }
+
+      .definition-list {
+        display: grid;
+        gap: 0.75rem;
+        margin: 1rem 0;
+      }
+      .definition {
+        padding: 1rem 1.1rem;
+        background: var(--panel);
+        border-left: 3px solid var(--rule);
+      }
+      .chapter-one .definition {
+        border-left-color: var(--chapter-one);
+      }
+      .chapter-two .definition {
+        border-left-color: var(--chapter-two);
+      }
+      .definition dt {
+        font-family: Arial, sans-serif;
+        font-size: 0.94rem;
+        font-weight: 700;
+      }
+      .definition dd {
+        margin: 0.25rem 0 0;
+        color: var(--muted);
+      }
+
+      table {
+        width: 100%;
+        margin: 1rem 0 1.5rem;
+        border-collapse: collapse;
+        background: var(--panel);
+        font-size: 0.95rem;
+      }
+      th,
+      td {
+        padding: 0.8rem;
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid var(--rule);
+      }
+      th {
+        color: #fff;
+        background: var(--ink);
+      }
+      td:first-child {
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+      }
+
+      .flow {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 1.25rem 0;
+        overflow: hidden;
+        border: 1px solid var(--rule);
+      }
+      .flow-step {
+        position: relative;
+        min-height: 152px;
+        padding: 1rem;
+        background: var(--panel);
+        border-right: 1px solid var(--rule);
+      }
+      .flow-step:last-child {
+        border-right: 0;
+      }
+      .flow-step strong {
+        display: block;
+        margin: 0.5rem 0;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+      }
+      .flow-step span {
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.35;
+      }
+      .chapter-one .flow-step:nth-child(odd) {
+        background: var(--chapter-one-pale);
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 1.25rem 0;
+      }
+      .phase {
+        padding: 1.1rem;
+        border-top: 5px solid var(--chapter-one);
+        background: var(--panel);
+      }
+      .phase:nth-child(2) {
+        border-color: #5796a9;
+      }
+      .phase:nth-child(3) {
+        border-color: var(--chapter-one-deep);
+      }
+      .phase h4 {
+        margin: 0.25rem 0 0.4rem;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+      }
+      .phase p {
+        margin-bottom: 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.4;
+      }
+
+      .compare {
+        margin: 1.25rem 0;
+      }
+      .compare summary {
+        cursor: pointer;
+        padding: 0.85rem 1rem;
+        color: var(--chapter-one-deep);
+        background: var(--chapter-one-pale);
+        font-family: Arial, sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+      .compare div {
+        padding: 0.1rem 1rem 0.6rem;
+        background: #fff;
+        border: 1px solid var(--chapter-one-pale);
+      }
+
+      .prompt-list {
+        list-style: none;
+        margin: 1.25rem 0 0;
+        padding: 0;
+      }
+      .prompt-list li {
+        display: grid;
+        grid-template-columns: 2rem 1fr;
+        gap: 0.65rem;
+        padding: 1rem 0;
+        border-top: 1px solid var(--rule);
+      }
+      .prompt-list li:last-child {
+        border-bottom: 1px solid var(--rule);
+      }
+      .prompt-number {
+        display: grid;
+        width: 1.65rem;
+        height: 1.65rem;
+        place-items: center;
+        color: #fff;
+        background: var(--chapter-one);
+      }
+      .chapter-two .prompt-number {
+        background: var(--chapter-two);
+      }
+
+      .exam-box {
+        margin-top: 2.25rem;
+        padding: 1.4rem;
+        color: #fff;
+        background: var(--ink);
+      }
+      .exam-box h3 {
+        margin-top: 0;
+        color: var(--gold);
+      }
+      .exam-box p:last-child {
+        margin-bottom: 0;
+        color: #d5dfe5;
+      }
+
+      .final-review {
+        margin-top: 4rem;
+        padding: 2rem;
+        background: var(--panel);
+        border-top: 6px solid var(--gold);
+      }
+      .final-review h2 {
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: -0.04em;
+      }
+      .review-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      .review-grid h3 {
+        margin-top: 1rem;
+      }
+
+      footer {
+        padding: 0 1.5rem 2.5rem;
+        color: var(--muted);
+        font-family: Arial, sans-serif;
+        font-size: 0.8rem;
+      }
+
+      @media (max-width: 760px) {
+        body {
+          font-size: 16px;
+        }
+        .masthead {
+          padding-top: 3rem;
+        }
+        .quick-start,
+        .chapter-grid,
+        .review-grid {
+          grid-template-columns: 1fr;
+          gap: 1.25rem;
+        }
+        .study-method,
+        .timeline {
+          grid-template-columns: 1fr;
+        }
+        .flow {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .flow-step:nth-child(2) {
+          border-right: 0;
+        }
+        .flow-step:nth-child(-n + 2) {
+          border-bottom: 1px solid var(--rule);
+        }
+        .chapter-heading {
+          grid-template-columns: 76px 1fr;
+          gap: 1rem;
+        }
+        .chapter-number {
+          font-size: 3.8rem;
+        }
+        th,
+        td {
+          padding: 0.6rem;
+        }
+        table {
+          font-size: 0.86rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+          font-size: 11pt;
+        }
+        nav {
+          display: none;
+        }
+        .masthead {
+          padding: 1.2rem;
+        }
+        main {
+          padding: 1rem;
+        }
+        .chapter {
+          margin-top: 2.25rem;
+          break-before: page;
+        }
+        .chapter:first-of-type {
+          break-before: auto;
+        }
+        .callout,
+        .phase,
+        .flow,
+        .exam-box,
+        .final-review {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead-inner">
+        <p class="eyebrow">Managing Innovation &middot; Tidd &amp; Bessant</p>
+        <h1>Managing Innovation</h1>
+        <p class="subtitle">
+          <em>Integrating Technological, Market and Organizational Change</em>.
+          Use the key ideas first, then test yourself with the recall prompts.
+        </p>
+      </div>
+    </header>
+
+    <nav aria-label="Study guide sections">
+      <a href="#how-to-use">How to use</a>
+      <a href="#chapter-1">Chapter 1</a>
+      <a href="#innovation-process">Innovation process</a>
+      <a href="#innovation-patterns">Patterns of change</a>
+      <a href="#chapter-2">Chapter 2</a>
+      <a href="#final-review">Final review</a>
+    </nav>
+
+    <main>
+      <section class="quick-start" id="how-to-use">
+        <div>
+          <p class="kicker">A practical routine</p>
+          <h2>Read. Explain. Recall.</h2>
+          <p>
+            Focus on relationships between ideas, not just vocabulary. Most exam
+            questions will ask how a concept changes an organization’s choices.
+          </p>
+        </div>
+        <div class="study-method" aria-label="Study method">
+          <div>
+            <strong>1. Scan</strong
+            ><span
+              >Read the bold terms and key lines for the chapter’s
+              argument.</span
+            >
+          </div>
+          <div>
+            <strong>2. Connect</strong
+            ><span
+              >Use the tables and flows to distinguish similar concepts.</span
+            >
+          </div>
+          <div>
+            <strong>3. Recall</strong
+            ><span>Answer the prompts aloud without looking at the guide.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter chapter-one" id="chapter-1">
+        <div class="chapter-heading">
+          <div class="chapter-number" aria-hidden="true">01</div>
+          <div>
+            <p class="chapter-label">Blue chapter</p>
+            <h2>What Innovation Is and Why It Matters</h2>
+            <p>
+              Innovation is a source of growth, survival, competitive advantage,
+              and social value.
+            </p>
+          </div>
+        </div>
+
+        <div class="chapter-grid">
+          <div>
+            <p class="lead">
+              Innovation is not simply an idea or invention. It is the
+              disciplined process of turning ideas into practical reality and
+              <strong>creating and capturing value</strong>.
+            </p>
+            <p class="key-line">
+              <strong>Core definition:</strong> Innovation is the successful
+              exploitation of new ideas. It includes both radical breakthroughs
+              and small, cumulative improvements.
+            </p>
+
+            <h3>Why organizations innovate</h3>
+            <ul>
+              <li>
+                <strong>Growth:</strong> innovation is strongly associated with
+                economic and organizational growth.
+              </li>
+              <li>
+                <strong>Survival:</strong> organizations that do not keep
+                changing offerings, operations, or business models risk being
+                left behind.
+              </li>
+              <li>
+                <strong>Competitive advantage:</strong> firms can compete
+                through new products, better processes, speed, quality, design,
+                and customization, not only low prices.
+              </li>
+              <li>
+                <strong>Social value:</strong> innovation can improve public
+                services, address unmet social needs, and create broader system
+                change.
+              </li>
+            </ul>
+
+            <h3>Innovation is opportunity-driven</h3>
+            <p>
+              Innovation depends on seeing connections, spotting opportunities,
+              and acting on them. Opportunities can come from serving
+              established markets in new ways, creating new markets, improving
+              operations, rethinking services, or meeting social needs.
+            </p>
+
+            <h3>Entrepreneurship and intrapreneurship</h3>
+            <p>
+              Entrepreneurship combines planning and vision, structured methods
+              and passion, judgment and a willingness to take calculated risks.
+              The entrepreneur may launch a startup; the
+              <strong>intrapreneur</strong> drives a risky new idea from inside
+              an established organization.
+            </p>
+
+            <h3>Four directions of innovation: the 4Ps</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Direction</th>
+                  <th scope="col">What changes?</th>
+                  <th scope="col">Memory cue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Product</td>
+                  <td>The goods or services offered to the world.</td>
+                  <td>What we offer</td>
+                </tr>
+                <tr>
+                  <td>Process</td>
+                  <td>How products or services are created and delivered.</td>
+                  <td>How we make/deliver it</td>
+                </tr>
+                <tr>
+                  <td>Position</td>
+                  <td>
+                    The context, target market, or story surrounding an
+                    offering.
+                  </td>
+                  <td>Where and for whom</td>
+                </tr>
+                <tr>
+                  <td>Paradigm</td>
+                  <td>
+                    The underlying mental model or business model framing the
+                    organization.
+                  </td>
+                  <td>How we think about the business</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <strong>Important distinction:</strong> Position innovation can
+              change how an established offering is perceived in a new user
+              context. Paradigm innovation goes deeper by changing the rules or
+              mental model itself.
+            </p>
+
+            <h3 id="innovation-process">
+              The innovation process: from idea to value
+            </h3>
+            <div
+              class="flow"
+              aria-label="Four phases of the innovation process"
+            >
+              <div class="flow-step">
+                <span class="tag">Phase 1</span><strong>Search</strong
+                ><span
+                  >Find signals, needs, problems, knowledge, and opportunities
+                  for change.</span
+                >
+              </div>
+              <div class="flow-step">
+                <span class="tag">Phase 2</span><strong>Select</strong
+                ><span
+                  >Make strategic choices: from all possible ideas, decide what
+                  to pursue.</span
+                >
+              </div>
+              <div class="flow-step">
+                <span class="tag">Phase 3</span><strong>Implement</strong
+                ><span
+                  >Convert the selected idea into reality through development
+                  and execution.</span
+                >
+              </div>
+              <div class="flow-step">
+                <span class="tag">Phase 4</span><strong>Capture value</strong
+                ><span
+                  >Ensure returns or benefits equal or exceed the resources
+                  invested.</span
+                >
+              </div>
+            </div>
+            <p>
+              Each phase is uncertain. Managing innovation means committing
+              resources to learn enough to reduce uncertainty while still making
+              calculated bets. An <strong>innovation strategy</strong> provides
+              the roadmap for how and why innovation will move the organization
+              forward.
+            </p>
+
+            <h3>Hidden innovation</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Type</th>
+                  <th scope="col">Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>I</td>
+                  <td>
+                    Innovation similar to traditionally measured activity but
+                    excluded from conventional indicators.
+                  </td>
+                </tr>
+                <tr>
+                  <td>II</td>
+                  <td>
+                    Innovation without a major scientific or technological
+                    basis, such as new organizational forms or business models.
+                  </td>
+                </tr>
+                <tr>
+                  <td>III</td>
+                  <td>
+                    Innovation created by a novel combination of existing
+                    technologies and processes.
+                  </td>
+                </tr>
+                <tr>
+                  <td>IV</td>
+                  <td>
+                    Locally developed, small-scale innovation that happens
+                    “under the radar,” such as everyday improvements in
+                    classrooms or teams.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <aside>
+            <div class="callout">
+              <p class="kicker">Exam-ready distinction</p>
+              <h3>Invention versus innovation</h3>
+              <p>
+                <strong>Invention</strong> creates something new.
+                <strong>Innovation</strong> completes the development and
+                exploitation needed to put that knowledge to practical use and
+                generate value.
+              </p>
+            </div>
+            <div class="callout">
+              <p class="kicker">Look for this</p>
+              <h3>First movers are not guaranteed winners</h3>
+              <p>
+                Very new innovations may lack a market. First movers often bear
+                the cost of educating and growing it, while later entrants can
+                learn from them and help shape demand.
+              </p>
+            </div>
+            <div class="callout">
+              <p class="kicker">At any scale</p>
+              <h3>Innovation over an organization’s life</h3>
+              <ul>
+                <li>
+                  <strong>Start-up:</strong> exploit a new technology or market
+                  opportunity.
+                </li>
+                <li>
+                  <strong>Growth:</strong> add offerings or enter markets.
+                </li>
+                <li>
+                  <strong>Sustain/scale:</strong> combine incremental and
+                  radical innovation.
+                </li>
+                <li>
+                  <strong>Renew:</strong> return to frame-breaking innovation
+                  when needed.
+                </li>
+              </ul>
+            </div>
+            <div class="exam-box">
+              <h3>One-sentence answer</h3>
+              <p>
+                Innovation is a managed, uncertain process in which
+                organizations search for opportunities, select strategic
+                options, implement ideas, and capture value from them.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="chapter chapter-one" id="innovation-patterns">
+        <div class="chapter-heading">
+          <div class="chapter-number" aria-hidden="true">01B</div>
+          <div>
+            <p class="chapter-label">Blue chapter continued</p>
+            <h2>Patterns, Levels, and Timing of Innovation</h2>
+            <p>
+              Innovation choices differ by novelty, system level, platform
+              potential, and life-cycle timing.
+            </p>
+          </div>
+        </div>
+
+        <div class="chapter-grid">
+          <div>
+            <h3>Incremental versus radical innovation</h3>
+            <div class="definition-list">
+              <dl class="definition">
+                <dt>Incremental innovation</dt>
+                <dd>
+                  Small, ongoing improvements to an existing product, process,
+                  service, or system. Most innovation is incremental; cumulative
+                  improvements can produce larger long-term gains than
+                  occasional radical leaps.
+                </dd>
+              </dl>
+              <dl class="definition">
+                <dt>Radical innovation</dt>
+                <dd>
+                  A major step change that may disrupt established technologies,
+                  markets, or business models. It usually brings much greater
+                  uncertainty.
+                </dd>
+              </dl>
+            </div>
+            <p>
+              Novelty is partly in the eye of the beholder: the relevant
+              question is how new the change seems to the users, organization,
+              or market. Continuous improvement underpins total quality
+              management, lean thinking, and the learning-curve effect.
+            </p>
+
+            <h3>Component and architectural innovation</h3>
+            <p>
+              Innovation combines different knowledge sets under uncertainty. A
+              change may affect a <strong>component</strong> or the larger
+              configuration of components and relationships, known as the
+              <strong>architecture</strong>. Architectural innovation often
+              requires new channels, knowledge flows, and capabilities for
+              systems integration.
+            </p>
+
+            <details class="compare">
+              <summary>
+                Open this quick comparison: component vs. architecture
+              </summary>
+              <div>
+                <p>
+                  <strong>Component change:</strong> a significant change in one
+                  element while the overall system remains familiar.
+                  <strong>Architectural change:</strong> a new configuration of
+                  components and relationships; the organization may need to
+                  reconfigure its knowledge, networks, and delivery system.
+                </p>
+              </div>
+            </details>
+
+            <h3>Four innovation zones</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Zone</th>
+                  <th scope="col">Condition</th>
+                  <th scope="col">Management challenge</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    Steady-state improvement using familiar core-component
+                    knowledge.
+                  </td>
+                  <td>Improve efficiently within clear rules.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    Major change in one element; overall architecture stays the
+                    same.
+                  </td>
+                  <td>Learn new knowledge within an established framework.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    Discontinuous innovation; neither outcome nor route is
+                    clear.
+                  </td>
+                  <td>Explore under high uncertainty.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    New architectures and combinations emerge, often for
+                    different users.
+                  </td>
+                  <td>Reconfigure knowledge sources and configurations.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Platforms and families</h3>
+            <p>
+              A <strong>platform</strong> is a robust base innovation that can
+              be extended into related products, services, processes, or brands.
+              Platforms let firms spread initial R&amp;D costs across multiple
+              applications and markets. They support continuous innovation by
+              creating “stretch and space” around a core concept.
+            </p>
+
+            <h3>Technology and market life cycles</h3>
+            <p>
+              The Abernathy and Utterback model explains how innovation shifts
+              as an industry evolves. A mature industry can be renewed when a
+              new discontinuity restarts the cycle.
+            </p>
+            <div class="timeline" aria-label="Innovation life-cycle phases">
+              <div class="phase">
+                <span class="tag">High uncertainty</span>
+                <h4>Fluid phase</h4>
+                <p>
+                  New technology and/or markets emerge. Organizations experiment
+                  with what customers want and how to deliver it.
+                </p>
+              </div>
+              <div class="phase">
+                <span class="tag">Convergence</span>
+                <h4>Transitional phase</h4>
+                <p>
+                  A dominant design emerges. Imitation and refinement increase;
+                  choices become more channelled.
+                </p>
+              </div>
+              <div class="phase">
+                <span class="tag">Maturity</span>
+                <h4>Specific phase</h4>
+                <p>
+                  Innovation emphasizes differentiation, customization,
+                  efficiency, and serving particular user needs.
+                </p>
+              </div>
+            </div>
+            <p>
+              <strong>Dominant design:</strong> the solution that becomes the
+              accepted basis for competition. It is not necessarily the
+              technically best solution, but it sets the “rules of the game” and
+              creates a technological trajectory.
+            </p>
+
+            <h3>Discontinuous innovation and creative destruction</h3>
+            <p>
+              A discontinuity changes the rules of the game. It can come from a
+              new technology, a new market with different expectations, or a new
+              business model. This links to Schumpeter’s idea of
+              <strong>creative destruction</strong>: new configurations open
+              opportunities while undermining older ones.
+            </p>
+          </div>
+
+          <aside>
+            <div class="callout">
+              <p class="kicker">Common trap</p>
+              <h3>Being good at improvement can create vulnerability</h3>
+              <p>
+                Steady-state practices work well in a mature phase, but they may
+                make it harder to succeed when a new fluid phase begins. The
+                disruptive source often comes from outside the industry.
+              </p>
+            </div>
+            <div class="callout">
+              <p class="kicker">Term to remember</p>
+              <h3>Sailing ship effect</h3>
+              <p>
+                A mature technology can accelerate its improvement in response
+                to a competing new alternative, as sailing ships improved when
+                steamships emerged.
+              </p>
+            </div>
+            <div class="callout">
+              <p class="kicker">Nuance matters</p>
+              <h3>Incumbents do not always fail</h3>
+              <p>
+                Existing firms can use their knowledge, networks, skills, and
+                financial assets to build on a new trajectory. The issue is
+                often how they manage innovation, not simply that they are
+                established.
+              </p>
+            </div>
+            <div class="exam-box">
+              <h3>Link the concepts</h3>
+              <p>
+                A radical discontinuity commonly triggers a fluid phase; a
+                dominant design follows; incremental innovation then dominates
+                until another discontinuity restarts the cycle.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="chapter chapter-two" id="chapter-2">
+        <div class="chapter-heading">
+          <div class="chapter-number" aria-hidden="true">02</div>
+          <div>
+            <p class="chapter-label">Amber chapter</p>
+            <h2>Digital Innovation</h2>
+            <p>
+              Digital technology expands innovation possibilities, changes how
+              innovation is managed, and raises new responsibilities.
+            </p>
+          </div>
+        </div>
+
+        <div class="chapter-grid">
+          <div>
+            <p class="lead">
+              Digital innovation uses digital tools and infrastructure to expand
+              the innovation space, accelerate search, and enable new forms of
+              value creation and capture.
+            </p>
+            <p class="key-line">
+              <strong>Working definition:</strong> Digital innovation is the
+              suite of technologies for creating/capturing, storing/retrieving,
+              processing, and communicating information, plus their combination
+              into higher-level systems with emergent properties.
+            </p>
+
+            <h3>Why digital technologies matter</h3>
+            <ul>
+              <li>
+                <strong>Programmability:</strong> core instructions can be
+                updated through software rather than physical redesign.
+              </li>
+              <li>
+                <strong>Falling cost and rising power:</strong> Moore’s Law
+                describes the long-run pattern of exponentially increasing
+                electronic capability as cost falls.
+              </li>
+              <li>
+                <strong>Connectivity:</strong> information can move almost
+                instantly between controllers and processing centers.
+              </li>
+              <li>
+                <strong>Integration and convergence:</strong> combining
+                technologies can increase efficiency and enable new
+                functionality.
+              </li>
+            </ul>
+
+            <h3>Transformative, but not instant</h3>
+            <p>
+              Digital innovation has been developing over decades, with rapid
+              application acceleration more recently. Its pattern resembles a
+              <strong>“long fuse, big bang”</strong>: long underlying
+              development followed by broad impact as key components and
+              infrastructure mature. Its broader impact depends on complementary
+              changes in social structures and expectations, a
+              <strong>techno-economic paradigm (TEP)</strong>.
+            </p>
+
+            <h3>Digital disruption: avoid the oversimplified story</h3>
+            <p>
+              Digital technologies can disrupt traditional sectors, but
+              disruption does not automatically destroy incumbents. Established
+              organizations can absorb digital tools to strengthen their core
+              competencies. The harder challenge is that digital transformation
+              is rarely “plug and play”: technology, skills, organizational
+              structures, and business models must be aligned.
+            </p>
+
+            <h3>How digital tools support the innovation process</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Innovation work</th>
+                  <th scope="col">Digital support</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Find ideas</td>
+                  <td>
+                    Open idea gateways, idea databases, comments, shared
+                    development, and grouping of related ideas and contributors.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Select ideas</td>
+                  <td>
+                    Ratings, comments, multiple evaluators, investor-style
+                    mechanisms, and transparent status feedback.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Implement ideas</td>
+                  <td>
+                    Online collaboration spaces, team support, and
+                    online/offline pitching and evaluation events.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Target ideation</td>
+                  <td>
+                    Campaigns that focus idea generation around strategic
+                    directions.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Manage knowledge</td>
+                  <td>
+                    Capture, synthesize, mine, connect, and redeploy
+                    organizational knowledge.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Agility, openness, and information</h3>
+            <p>
+              Digital infrastructure supports
+              <strong>open innovation</strong> by making extensive networking
+              and collaboration more feasible. It provides both
+              <strong>richness</strong> (high-quality, high-content
+              communication) and <strong>reach</strong> (access to a large
+              population). It can also support
+              <strong>agile innovation</strong>, which follows a rapid
+              build/test/learn/pivot cycle.
+            </p>
+
+            <h3>System-level thinking</h3>
+            <p>
+              Digital innovation is not merely using improved tools to
+              substitute for an old product or process. It can require
+              redesigning the entire system of value creation. Organizations may
+              coordinate networks, virtual partners, communities, consortia,
+              customers, suppliers, and other stakeholders to produce
+              <strong>emergent properties</strong>, where the whole is greater
+              than the sum of its parts.
+            </p>
+
+            <h3>Knowledge, data, and responsibility</h3>
+            <p>
+              Knowledge creation and deployment are central to innovation.
+              Digital systems create big-data opportunities often described
+              through the <strong>3 Vs</strong>: <strong>volume</strong>,
+              <strong>velocity</strong>, and <strong>variety</strong>. However,
+              responsible innovation is essential because digital innovations
+              can also create harms involving privacy, security, cybercrime, and
+              emotional or physical well-being.
+            </p>
+          </div>
+
+          <aside>
+            <div class="callout">
+              <p class="kicker">Key distinction</p>
+              <h3>Digitalization is not the whole answer</h3>
+              <p>
+                Installing a tool is not the same as innovating. Value appears
+                only when the organization learns to use the technology and
+                configures its skills, structures, and business model around it.
+              </p>
+            </div>
+            <div class="callout">
+              <p class="kicker">The productivity paradox</p>
+              <h3>Technology alone may not improve performance</h3>
+              <p>
+                New technologies often fail to work effectively on a simple
+                plug-and-play basis. Complementary organizational learning and
+                redesign are needed.
+              </p>
+            </div>
+            <div class="callout">
+              <p class="kicker">System-level challenge</p>
+              <h3>Orchestration</h3>
+              <p>
+                At the ecosystem level, innovation management must balance
+                individual and collective action while addressing governance and
+                control across many actors.
+              </p>
+            </div>
+            <div class="exam-box">
+              <h3>One-sentence answer</h3>
+              <p>
+                Digital innovation expands both the outputs and the process of
+                innovation, but its benefits depend on complementary
+                capabilities, system-level coordination, and responsible
+                management.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="final-review" id="final-review">
+        <p class="kicker">Close-book practice</p>
+        <h2>Recall Prompts</h2>
+        <p>
+          Cover the guide and answer each question in two or three complete
+          sentences. Then check whether your answer names the concept, explains
+          it, and gives its managerial implication.
+        </p>
+        <div class="review-grid">
+          <div class="chapter-one">
+            <h3>Chapter 1</h3>
+            <ol class="prompt-list">
+              <li>
+                <span class="prompt-number">1</span
+                ><span
+                  >Why is innovation more than invention? What must happen for
+                  an idea to count as innovation?</span
+                >
+              </li>
+              <li>
+                <span class="prompt-number">2</span
+                ><span
+                  >Explain the 4Ps. Which one changes the organization’s
+                  underlying mental model?</span
+                >
+              </li>
+              <li>
+                <span class="prompt-number">3</span
+                ><span
+                  >What are the four phases of the innovation process, and what
+                  decision is central to the select phase?</span
+                >
+              </li>
+              <li>
+                <span class="prompt-number">4</span
+                ><span
+                  >Compare incremental and radical innovation. Why can
+                  incremental change be strategically powerful?</span
+                >
+              </li>
+              <li>
+                <span class="prompt-number">5</span
+                ><span
+                  >Describe the fluid, transitional, and specific phases. What
+                  is a dominant design?</span
+                >
+              </li>
+              <li>
+                <span class="prompt-number">6</span
+                ><span
+                  >Why can successful incumbents struggle with discontinuous
+                  innovation, and why do some still succeed?</span
+                >
+              </li>
+            </ol>
+          </div>
+          <div class="chapter-two">
+            <h3>Chapter 2</h3>
+            <ol class="prompt-list">
+              <li>
+                <span class="prompt-number">1</span
+                ><span
+                  >Define digital innovation. What capabilities are included in
+                  the definition?</span
+                >
+              </li>
+              <li>
+                <span class="prompt-number">2</span
+                ><span
+                  >Why is digital change described as “long fuse, big bang”
+                  rather than an overnight revolution?</span
+                >
+              </li>
+              <li>
+                <span class="prompt-number">3</span
+                ><span
+                  >How can digital tools support searching, selecting, and
+                  implementing innovation ideas?</span
+                >
+              </li>
+              <li>
+                <span class="prompt-number">4</span
+                ><span>Why is digital transformation not “plug and play”?</span>
+              </li>
+              <li>
+                <span class="prompt-number">5</span
+                ><span
+                  >What does system-level thinking add beyond improving a single
+                  product or process?</span
+                >
+              </li>
+              <li>
+                <span class="prompt-number">6</span
+                ><span
+                  >What are the 3 Vs of big data, and why does responsible
+                  innovation matter?</span
+                >
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Prepared from the provided Kindle notes for
+      <em
+        >Managing Innovation: Integrating Technological, Market and
+        Organizational Change</em
+      >
+      by Joe Tidd and John R. Bessant.
+    </footer>
+  </body>
+</html>
