@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A study guide to Chapter 5 on organizing for innovation, based on the supplied Kindle notes.">
+  <title>Chapter 5 Study Guide — Organizing for Innovation</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #15343b;
+      --ink-soft: #34545a;
+      --paper: #f3f7f4;
+      --panel: #ffffff;
+      --line: #d5e1dc;
+      --teal: #087f78;
+      --teal-pale: #e1f2ed;
+      --lime: #d6ef68;
+      --gold: #a86313;
+      --gold-pale: #fff1d9;
+      --shadow: 0 12px 34px rgba(21, 52, 59, .07);
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.65 var(--sans);
+    }
+    a { color: var(--teal); text-underline-offset: .18em; }
+    a:hover { color: #045b57; }
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid #b1d644;
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+    .masthead {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(2.5rem, 7vw, 6rem) max(1.25rem, calc((100vw - 1160px) / 2));
+      background: var(--ink);
+      color: #f5fbf7;
+      border-bottom: 8px solid var(--lime);
+    }
+    .masthead::after {
+      content: "";
+      position: absolute;
+      width: 29rem;
+      height: 29rem;
+      right: -7rem;
+      top: -14rem;
+      border: 1px solid rgba(214, 239, 104, .38);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2rem rgba(214, 239, 104, .035), 0 0 0 5rem rgba(214, 239, 104, .025);
+      pointer-events: none;
+    }
+    .masthead-inner { position: relative; z-index: 1; max-width: 1160px; margin: auto; }
+    .eyebrow, .section-kicker {
+      font: 700 .73rem/1.3 var(--mono);
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .eyebrow { color: var(--lime); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 820px;
+      margin: .8rem 0 1rem;
+      font: 500 clamp(2.7rem, 7vw, 5.6rem)/.99 var(--serif);
+      letter-spacing: -.045em;
+    }
+    .dek { max-width: 690px; color: #c8d9d4; font-size: clamp(1.05rem, 2vw, 1.25rem); }
+    .source-line { margin: 2rem 0 0; color: #a8c2bb; font-size: .88rem; }
+    .source-line strong { color: #f5fbf7; font-weight: 600; }
+    .layout {
+      display: grid;
+      grid-template-columns: 225px minmax(0, 1fr);
+      gap: clamp(1.5rem, 4vw, 4rem);
+      width: min(1160px, calc(100% - 2.5rem));
+      margin: 2.5rem auto 5rem;
+      align-items: start;
+    }
+    .rail { position: sticky; top: 1rem; }
+    .rail-title { margin: 0 0 .7rem; color: var(--ink-soft); font: 700 .7rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .rail nav { border-left: 1px solid var(--line); padding: .15rem 0 .15rem .9rem; }
+    .rail a { display: block; padding: .35rem 0; color: var(--ink-soft); text-decoration: none; font-size: .88rem; }
+    .rail a:hover { color: var(--teal); }
+    main { min-width: 0; }
+    .intro-card, .study-section { background: var(--panel); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .intro-card { padding: clamp(1.25rem, 3vw, 2rem); border-top: 4px solid var(--teal); }
+    .intro-card h2 { margin-bottom: .55rem; font: 500 1.8rem/1.15 var(--serif); }
+    .intro-card p:last-child { margin-bottom: 0; }
+    .thesis {
+      display: grid;
+      grid-template-columns: 8px 1fr;
+      gap: 1rem;
+      margin-top: 1.2rem;
+      padding: 1rem 1.1rem;
+      background: var(--teal-pale);
+    }
+    .thesis::before { content: ""; background: var(--teal); }
+    .thesis p { margin: 0; }
+    .study-section { margin-top: 1.5rem; padding: clamp(1.25rem, 3vw, 2rem); }
+    .section-kicker { margin-bottom: .55rem; color: var(--teal); }
+    h2 { margin-bottom: .8rem; font: 500 clamp(1.7rem, 3vw, 2.35rem)/1.12 var(--serif); letter-spacing: -.025em; }
+    h3 { margin: 1.4rem 0 .45rem; font-size: 1.05rem; line-height: 1.3; }
+    p { margin-bottom: .9rem; }
+    .study-section > :last-child { margin-bottom: 0; }
+    .keyline { border-top: 1px solid var(--line); margin: 1.3rem 0; }
+    .callout {
+      margin: 1.1rem 0;
+      padding: 1rem 1.15rem;
+      background: var(--gold-pale);
+      border-left: 4px solid #db9b35;
+    }
+    .callout strong { color: #724209; }
+    .table-wrap { overflow-x: auto; margin: 1rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+    th, td { padding: .75rem .8rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: #edf4f0; color: var(--ink); font: 700 .72rem var(--mono); letter-spacing: .055em; text-transform: uppercase; }
+    td:first-child { width: 25%; font-weight: 700; }
+    ul, ol { padding-left: 1.25rem; }
+    li { margin: .34rem 0; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: .5rem; margin: .75rem 0; padding: 0; list-style: none; }
+    .pill-list li { margin: 0; padding: .32rem .6rem; background: var(--teal-pale); border-radius: 2px; color: #145b55; font-size: .84rem; }
+    .stages { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .55rem; margin: 1rem 0; }
+    .stage { min-height: 145px; padding: .8rem; background: #edf4f0; border-top: 3px solid #80bcb0; }
+    .stage:last-child { border-color: var(--teal); background: var(--teal-pale); }
+    .stage b { display: block; margin-bottom: .35rem; font: 700 .67rem var(--mono); color: var(--teal); text-transform: uppercase; }
+    .stage span { display: block; font-weight: 700; line-height: 1.25; }
+    .stage small { display: block; margin-top: .45rem; color: var(--ink-soft); line-height: 1.4; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .mini-card { padding: 1rem; border: 1px solid var(--line); background: #fbfdfb; }
+    .mini-card h3 { margin-top: 0; }
+    .mini-card p:last-child { margin-bottom: 0; }
+    details { margin: .65rem 0; border: 1px solid var(--line); background: #fbfdfb; }
+    summary { padding: .75rem .9rem; cursor: pointer; font-weight: 700; }
+    details p, details ul { padding: 0 .9rem; }
+    details p:last-child, details ul:last-child { padding-bottom: .7rem; }
+    .question { color: var(--ink); }
+    .quick-review { background: var(--ink); color: #eef7f2; border: 0; }
+    .quick-review h2 { color: #fff; }
+    .quick-review .section-kicker { color: var(--lime); }
+    .quick-review li::marker { color: var(--lime); }
+    .quick-review strong { color: var(--lime); }
+    footer { width: min(1160px, calc(100% - 2.5rem)); margin: -2rem auto 2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: .82rem; }
+    @media (max-width: 800px) {
+      .layout { grid-template-columns: 1fr; }
+      .rail { position: static; }
+      .rail nav { display: flex; flex-wrap: wrap; gap: .15rem 1rem; border-left: 0; border-bottom: 1px solid var(--line); padding: 0 0 .8rem; }
+      .rail a { padding: .25rem 0; }
+      .stages { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stage:last-child { grid-column: 1 / -1; min-height: auto; }
+    }
+    @media (max-width: 560px) {
+      .two-col { grid-template-columns: 1fr; }
+      .table-wrap table { min-width: 600px; }
+      .stages { grid-template-columns: 1fr; }
+      .stage:last-child { grid-column: auto; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { background: #fff; font-size: 10.5pt; }
+      .masthead { padding: 1.5rem; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .masthead::after, .rail { display: none; }
+      .layout { display: block; width: 100%; margin: 1rem 0; }
+      .study-section, .intro-card { box-shadow: none; break-inside: avoid; margin-top: .8rem; }
+      .quick-review { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      a { color: inherit; }
+      details > *:not(summary) { display: block; }
+      footer { width: 100%; margin-top: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="eyebrow">Managing Innovation · Chapter 5</div>
+      <h1>Organizing for<br>Innovation</h1>
+      <p class="dek">A study guide to the people, structures, teams, climate, and networks that help new ideas become widely used innovations.</p>
+      <p class="source-line"><strong>Based on your Chapter 5 Kindle highlights</strong> from <em>Managing Innovation: Integrating Technological, Market and Organizational Change</em>, Joe Tidd and John R. Bessant.</p>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="rail" aria-label="Study guide contents">
+      <p class="rail-title">On this page</p>
+      <nav>
+        <a href="#big-picture">Big picture</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#structure">Organizational structure</a>
+        <a href="#individuals">Key individuals</a>
+        <a href="#hii">High-involvement innovation</a>
+        <a href="#teams">Teams</a>
+        <a href="#climate">Creative climate</a>
+        <a href="#networks">External networks</a>
+        <a href="#review">Self-test</a>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="intro-card" id="big-picture">
+        <div class="section-kicker">The chapter in one idea</div>
+        <h2>Innovation is an organizational capability</h2>
+        <p>Innovation involves learning and change, and can be disruptive, risky, and costly. It does not depend on one brilliant idea alone: people need room and support to develop ideas, solve problems, coordinate across roles, and bring change into use.</p>
+        <div class="thesis"><p><strong>Core thesis:</strong> there is no single best structure, leadership style, team arrangement, or innovation climate. Effective organization means creating a fit between the task, the uncertainty and complexity involved, and the support people need to act.</p></div>
+        <h3>Six connected components of an innovative organization</h3>
+        <ul class="pill-list">
+          <li>Shared vision and leadership</li><li>Appropriate structure</li><li>Key individuals</li><li>Effective team working</li><li>High-involvement innovation</li><li>Creative climate and external focus</li>
+        </ul>
+        <p>These components reinforce each other: leadership sets direction and enables action; structure supports the work; individuals and teams carry it forward; climate shapes whether people contribute; networks extend access to knowledge and resources.</p>
+      </section>
+
+      <section class="study-section" id="leadership">
+        <div class="section-kicker">Direction · commitment · learning</div>
+        <h2>Leadership for innovation</h2>
+        <p>Innovation challenges the status quo. Organizations may resist through inertia, dismiss outside ideas through a “not-invented-here” response, underestimate threats, or let core competencies harden into <strong>core rigidities</strong>. A new vision can refocus organizational energy and help good ideas advance without their creators having to leave.</p>
+        <h3>What senior commitment looks like in practice</h3>
+        <ul>
+          <li>Make the purpose and direction clear and shared.</li>
+          <li>Show visible involvement, enthusiasm, and support—not just verbal endorsement.</li>
+          <li>Stay committed to major projects over the long term. Uncertain innovation may need “patient money”; near-term return is not the only measure. Future market growth and strategic benefits may matter too.</li>
+          <li>Accept risk and treat failure as an opportunity for learning and development.</li>
+        </ul>
+        <div class="callout"><strong>Leadership is consequential, not all-powerful.</strong> The notes summarize research suggesting leadership directly accounts for about 15% of observed business-performance differences and contributes about another 35% through business-strategy choices. Leadership can enable innovation, while some innovation also advances through informal or “guerrilla” efforts despite senior management.</div>
+        <h3>Match leadership to the work</h3>
+        <p>There is no short, universal list of traits that defines a good leader in every situation. Useful capabilities in the notes include relevant expertise, cognitive ability, creative problem-solving, information processing, social competence, communication, energy, resilience, and willingness to take responsibility.</p>
+        <ul>
+          <li><strong>For novel, uncertain, exploratory work:</strong> technical and cognitive expertise help leaders frame ill-defined problems, evaluate ideas, offer feedback, stimulate new ways of thinking, and work with others to implement solutions. Transformational leadership is a stronger predictor of success in more exploratory and radical projects.</li>
+          <li><strong>For administrative contexts:</strong> a transactional style may help, while it can be counterproductive in a research context.</li>
+          <li><strong>Vision needs encouraging communication:</strong> an idealized picture of the future can lower followers’ confidence if it is not accompanied by positive, motivating communication.</li>
+        </ul>
+        <p>Creative leadership is not simply passive encouragement. Evaluation can be valuable early—while defining problems and shaping ideas—and later, when people need feedback and insight into implications.</p>
+      </section>
+
+      <section class="study-section" id="structure">
+        <div class="section-kicker">Fit the design to the conditions</div>
+        <h2>Organizational structure</h2>
+        <p>When tasks are uncertain, complex, and less programmed, organizations need more flexibility in relationships and decision-making. Stable, routine work can be served by more formalized structures. Burns and Stalker describe organic and mechanistic forms as ends of a spectrum: organic forms suit rapid change; mechanistic forms suit stable conditions.</p>
+        <div class="two-col">
+          <div class="mini-card"><h3>Organic tendencies</h3><p>Flexible relationships, discretion, adaptation, and coordination that can respond to change. Useful as uncertainty and complexity rise.</p></div>
+          <div class="mini-card"><h3>Mechanistic tendencies</h3><p>More centralized, formalized, specialized, and routine. Useful where stable conditions and repeatable processes make coordination through systems effective.</p></div>
+        </div>
+        <p class="callout"><strong>Contingency principle:</strong> successful organizations seek a good fit between structure and operating conditions; no one form is best for every organization. Process innovation—such as parallel working, early involvement of functional specialists, closer market links, user involvement, and team coordination—can reduce time to market and improve responsiveness.</p>
+        <h3>Mintzberg’s structural archetypes in the notes</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Archetype</th><th>How it is organized</th><th>Innovation implications / trade-offs</th></tr></thead>
+            <tbody>
+              <tr><td>Simple structure</td><td>Small, centrally controlled, often led directly by one person; organic and responsive.</td><td>Fast response and clear purpose; vulnerable to individual misjudgment or prejudice and limited resources for growth.</td></tr>
+              <tr><td>Machine bureaucracy</td><td>Centralized and mechanistic, coordinated through systems, specialization, and routinized behavior.</td><td>Handles complex integrated processes effectively; may alienate people and accumulate rigidities.</td></tr>
+              <tr><td>Divisionalized form</td><td>Large organization split into semi-independent units that adapt to local markets or environments, with central support.</td><td>Can target particular niches; may create friction between divisions and the center.</td></tr>
+              <tr><td>Professional bureaucracy</td><td>Decentralized professional autonomy coordinated through shared standards and consensus.</td><td>Brings high skill and teams together; coordination relies on professional norms.</td></tr>
+              <tr><td>Adhocracy</td><td>Flexible, project-based, team-oriented, with few internal rules; designed for instability and complexity.</td><td>Supports creativity and uncertainty; can struggle with conflict and lack of formal control or standards.</td></tr>
+              <tr><td>Mission-oriented</td><td>Held together by shared values and a common, often altruistic purpose.</td><td>Encourages commitment and initiative; may lack formal control and sanctions.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Lean production is one example of loosening a structure to support innovation through team working, participation in problem solving, flexible cells, and flatter hierarchies.</p>
+      </section>
+
+      <section class="study-section" id="individuals">
+        <div class="section-kicker">People who move ideas through the system</div>
+        <h2>Key individuals and innovation roles</h2>
+        <p>Innovation often depends on individuals who connect technical work to the wider organization. One person may take several roles, and roles may be shared.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Role</th><th>Contribution</th><th>Watch for</th></tr></thead>
+            <tbody>
+              <tr><td>Technical champion / inventor</td><td>Provides critical technical knowledge, solves development problems, and sustains inspiration and motivation through a long process.</td><td>May become attached to a “pet” idea and resist letting go when it is no longer a sensible direction.</td></tr>
+              <tr><td>Organizational sponsor</td><td>Secures resources and addresses organizational resistance, including skeptical or hostile critics.</td><td>Innovation needs organizational backing as well as technical progress.</td></tr>
+              <tr><td>Project leader</td><td>Coordinates the team and helps connect people and work. A “heavyweight” manager is deeply involved and empowered; a “lightweight” manager is more distant.</td><td>Match the level of project-manager involvement to the situation; do not use heavyweight authority as a sledgehammer for a simple task.</td></tr>
+              <tr><td>Technological gatekeeper</td><td>Uses informal networks to collect information and pass it to people who can use it. Good information flow is important to innovation.</td><td>Gatekeepers may sit outside formal information-management roles; recognize informal connections.</td></tr>
+              <tr><td>Project assassin</td><td>A negative champion whose influence can kill an innovation project.</td><td>Key individuals can either energize or obstruct innovation.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="study-section" id="hii">
+        <div class="section-kicker">Everyday learning at every level</div>
+        <h2>High-involvement innovation (HII)</h2>
+        <p>HII means involving people throughout the organization in ongoing problem solving and continuous improvement. The notes connect the Japanese manufacturing “quality miracle” with <em>kaizen</em>, or continuous improvement. HII capability develops from occasional activity toward an organization-wide learning habit.</p>
+        <div class="stages" aria-label="Five stages in the evolution of high-involvement innovation">
+          <div class="stage"><b>Stage 1</b><span>Natural / background</span><small>Random, occasional problem solving; little formal support or strategic impact.</small></div>
+          <div class="stage"><b>Stage 2</b><span>Structured</span><small>Formal process, participation, training, idea management, and recognition.</small></div>
+          <div class="stage"><b>Stage 3</b><span>Goal-oriented</span><small>Improvement work is aligned with strategic goals; activity is monitored and measured.</small></div>
+          <div class="stage"><b>Stage 4</b><span>Proactive / empowered</span><small>Teams and individuals gain responsibility to direct activity and experiment.</small></div>
+          <div class="stage"><b>Stage 5</b><span>Full capability</span><small>Learning organization: everyone improves, experiments, captures, and shares learning.</small></div>
+        </div>
+        <p><strong>Progression to remember:</strong> informal → structured → strategically aligned → empowered → embedded learning. At Stage 3, activity is still largely directed by management; Stage 4 introduces local initiative and experimentation.</p>
+      </section>
+
+      <section class="study-section" id="teams">
+        <div class="section-kicker">Collective problem solving</div>
+        <h2>Teams: potential and conditions for success</h2>
+        <p>Teams can generate more ideas and a wider range of solutions than individuals by combining knowledge, experience, and perspectives. But teams do not automatically work well: selection and team building matter, and teamwork is not always the right answer.</p>
+        <div class="two-col">
+          <div class="mini-card">
+            <h3>Potential assets</h3>
+            <ul><li>More knowledge and information</li><li>Cross-fertilization and development of ideas</li><li>Broader experience and perspectives</li><li>Greater understanding, acceptance, commitment, and ownership through participation</li><li>Opportunities for group development, cohesion, communication, and companionship</li></ul>
+          </div>
+          <div class="mini-card">
+            <h3>Potential liabilities</h3>
+            <ul><li>Pressure to conform and groupthink</li><li>Dominant individuals exerting disproportionate influence</li><li>Reduced individual accountability and riskier group decisions</li><li>Competition driven by conflicting biases</li></ul>
+          </div>
+        </div>
+        <h3>Conditions that support effective teams</h3>
+        <ul>
+          <li>Clear, common, elevating goals; clearly defined tasks and objectives.</li>
+          <li>Competent members with relevant skills, conscientiousness, willingness to contribute, and ability to collaborate.</li>
+          <li>Effective leadership, results-oriented structure, unified commitment, and a collaborative climate.</li>
+          <li>Balanced team roles, constructive conflict resolution, and effective group processes.</li>
+          <li>Standards of excellence, participation in decisions, external liaison, support, recognition, and resources.</li>
+          <li>Use the team where the task calls for it, with clear boundaries and appropriate authority.</li>
+        </ul>
+        <p>The notes use the familiar team-development sequence: <strong>forming → storming → norming → performing</strong>. Teams first assemble, then work through differences and conflict, develop shared norms, and become ready for effective task performance. Diversity of background, ability, and behavioral style can help; highly talented but similar people may perform less well than mixed groups.</p>
+        <h3>Common “tripwires”</h3>
+        <ul>
+          <li><strong>Group versus team:</strong> naming a group a team does not create shared work or responsibility.</li>
+          <li><strong>Ends versus means:</strong> decide how much authority a team has to resolve its own issues.</li>
+          <li><strong>Structured freedom:</strong> give clear outcomes and enough structure; vague assignments alone are not empowerment.</li>
+          <li><strong>Support systems:</strong> challenging objectives need resources and rewards that recognize team performance.</li>
+          <li><strong>Assumed competence:</strong> technical expertise alone does not guarantee effective collaboration.</li>
+        </ul>
+      </section>
+
+      <section class="study-section" id="climate">
+        <div class="section-kicker">The everyday experience of work</div>
+        <h2>Creativity and organizational climate</h2>
+        <p>Everyone has creative capacity, but people express it in different ways—from radical challenges to small incremental improvements. Innovation requires both major creative leaps and many smaller acts of problem-finding and problem-solving. Many people contribute across the journey from invention to widespread use.</p>
+        <div class="callout"><strong>Climate and culture are related but distinct.</strong> Culture refers to deeper, more enduring values, norms, and beliefs. Climate refers to recurring patterns of behavior, attitudes, and feelings—the shared perceptions of life in a work unit or organization. Climate is more observable at the surface and more amenable to change efforts.</div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Climate dimension</th><th>When it supports innovation</th><th>When it is out of balance</th></tr></thead>
+            <tbody>
+              <tr><td>Trust and openness</td><td>People feel safe sharing ideas, opinions, and initiatives; communication is straightforward; failure does not invite ridicule or reprisal.</td><td>Low trust can lead to fear, idea-hoarding, resource-hoarding, and concern about exploitation.</td></tr>
+              <tr><td>Challenge and involvement</td><td>People connect daily work to goals and vision, feel intrinsically motivated, and find meaning in contributing.</td><td>Too little creates apathy and alienation; too much stretch can contribute to burnout. Clarify priorities if demands are excessive.</td></tr>
+              <tr><td>Support and space for ideas</td><td>People have time and support to discuss, develop, and test ideas outside immediate routines.</td><td>When every minute is booked, time pressure reduces creative thinking. Too little organizational slack limits long-term innovation.</td></tr>
+              <tr><td>Conflict and debate</td><td>Constructive debate can coexist with cooperation.</td><td>Excessive personal conflict can produce warfare, gossip, aggression, and information-hoarding; too little engagement can signal low motivation. Cooperation or restructuring may be needed.</td></tr>
+              <tr><td>Risk-taking</td><td>People tolerate uncertainty and ambiguity and are willing to put forward bold ideas before outcomes are known.</td><td>A climate that does not tolerate uncertainty discourages initiative.</td></tr>
+              <tr><td>Freedom</td><td>People have autonomy to define aspects of their work, exercise discretion, seek information, and make plans and decisions.</td><td>Strict roles and prescribed methods leave little room to redefine tasks or take initiative.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Slack has a balance point.</strong> For high-performing organizations, the notes describe an inverted-U relationship: too little time or resource constrains innovation, while too much may weaken direction and incentive. In low-performing organizations, slack may simply be absorbed as inefficiency. Time is also a variable managers can influence—not only a constraint.</p>
+      </section>
+
+      <section class="study-section" id="networks">
+        <div class="section-kicker">Innovation beyond organizational boundaries</div>
+        <h2>External focus and networks</h2>
+        <p>Networking helps address resource constraints. An organization does not need every specialized resource under one roof if it knows where to find resources and how to connect with them. Information and communication technologies support information processing, open innovation, and virtual organizations.</p>
+        <p>The notes point to collaboration in shared product development, complex product systems, technology fusion, strategic alliances, regional clusters, sector consortia, topic networks, industry associations, and cooperative supply chains.</p>
+        <h3>What helps networks form and endure?</h3>
+        <ul>
+          <li><strong>Key individuals:</strong> champions and sponsors bring people together, provide direction, and build a system-level sense of purpose. Network brokers may help create regional or sector networks.</li>
+          <li><strong>Facilitation:</strong> neutral support can help establish a network and handle operating needs such as conflict resolution.</li>
+          <li><strong>Key organizations:</strong> institutions such as development agencies or business associations can convene and govern a network. Their absence can limit inter-organizational learning and innovation.</li>
+        </ul>
+      </section>
+
+      <section class="study-section quick-review" id="review">
+        <div class="section-kicker">Retrieval practice</div>
+        <h2>Check your understanding</h2>
+        <p>Try answering each prompt from memory before opening the cue.</p>
+        <details><summary class="question">1. Why is there no single best organizational structure for innovation?</summary><p>Structure needs to fit the task and operating contingencies. Uncertain, complex, and less programmed work tends to require flexibility; stable, routine work can use more formalized systems.</p></details>
+        <details><summary class="question">2. What are core rigidities, and why do they matter?</summary><p>Capabilities that once created strength can become shared mind-sets that block behavioral change. Ideas challenging the status quo then face resistance, so innovation needs energy and support to overcome inertia.</p></details>
+        <details><summary class="question">3. Name four key roles individuals can play in innovation.</summary><p>Examples from the notes: technical champion/inventor, organizational sponsor, project leader, technological gatekeeper, and negative champion or project assassin.</p></details>
+        <details><summary class="question">4. Explain the five stages of HII in order.</summary><p>Natural/background → structured → goal-oriented → proactive/empowered → full HII capability as a learning organization.</p></details>
+        <details><summary class="question">5. Give two benefits and two risks of using teams.</summary><p>Benefits include more knowledge, wider perspectives, cross-fertilization, and stronger ownership. Risks include conformity/groupthink, dominant individuals, reduced accountability, and unproductive competition.</p></details>
+        <details><summary class="question">6. How do climate and culture differ?</summary><p>Culture is the deeper, more enduring set of values, norms, and beliefs; climate is the more observable pattern of behavior, attitudes, and feelings that people share at work.</p></details>
+        <details><summary class="question">7. What is the inverted-U idea about organizational slack?</summary><p>Among high-performing organizations, too little slack constrains innovation, while too much may reduce incentive or direction. A middle range can provide resources without losing focus.</p></details>
+        <details><summary class="question">8. How can networks extend an organization’s innovation capacity?</summary><p>Networks connect an organization to specialized knowledge and resources elsewhere. Key individuals, facilitators, and key organizations can help build and sustain those connections.</p></details>
+        <div class="keyline"></div>
+        <h3>Fast synthesis prompt</h3>
+        <p>For an uncertain innovation project, explain how leadership, structure, key roles, team design, climate, HII, and external networks could work together. Anchor your answer in <strong>fit</strong>: which conditions does the work require, and what organizational support makes those conditions possible?</p>
+      </section>
+    </main>
+  </div>
+  <footer>Study guide synthesized from the supplied NOTES file. Use the chapter text for full context around the highlighted passages.</footer>
+</body>
+</html>
