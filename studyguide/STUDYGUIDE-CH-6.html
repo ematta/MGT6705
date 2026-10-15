@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Chapter 6 study guide on sources of innovation, from knowledge push and need pull to users, design, regulation, and serendipity.">
+  <title>Chapter 6 Study Guide — Sources of Innovation</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202b35;
+      --muted: #52616b;
+      --paper: #f5f6f2;
+      --white: #fff;
+      --line: #d9dfda;
+      --teal: #12665f;
+      --teal-pale: #e3f1ed;
+      --gold: #d9a746;
+      --gold-pale: #fbf1d9;
+      --coral: #b84c39;
+      --navy: #172c3a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.65 var(--sans);
+    }
+    a { color: var(--teal); text-underline-offset: 3px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+    .masthead {
+      background: var(--navy);
+      color: #f7f5ed;
+      padding: 4.2rem max(1.25rem, calc((100vw - 1100px) / 2)) 3.7rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .masthead::after {
+      content: "PUSH  ⇄  PULL";
+      position: absolute;
+      right: max(1rem, calc((100vw - 1100px) / 2));
+      bottom: 1.4rem;
+      color: rgba(255,255,255,.13);
+      font: 700 clamp(1.2rem, 4vw, 3rem)/1 var(--mono);
+      letter-spacing: .12em;
+      white-space: nowrap;
+    }
+    .eyebrow, .kicker {
+      color: #a6d7ca;
+      font: 700 .75rem/1.4 var(--mono);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.15; }
+    h1 {
+      max-width: 780px;
+      margin: .75rem 0 1rem;
+      font: 500 clamp(2.8rem, 7vw, 5.5rem)/.99 var(--serif);
+      letter-spacing: -.045em;
+    }
+    .dek { max-width: 650px; margin: 0; color: #d7e0df; font-size: 1.12rem; }
+    .hero-note {
+      display: inline-flex;
+      margin-top: 1.8rem;
+      padding: .45rem .75rem;
+      border: 1px solid rgba(255,255,255,.32);
+      color: #f4dc9f;
+      font: .78rem var(--mono);
+      letter-spacing: .02em;
+    }
+    .layout { width: min(1100px, calc(100% - 2.5rem)); margin: 2.2rem auto 5rem; }
+    .topline { display: grid; grid-template-columns: 1fr 2.2fr; gap: 2rem; align-items: start; margin-bottom: 2rem; }
+    .toc { position: sticky; top: 1rem; padding: 1.1rem 1.15rem; background: var(--white); border-top: 3px solid var(--teal); }
+    .toc h2 { margin: 0 0 .6rem; font: 700 .76rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .toc ol { margin: 0; padding-left: 1.2rem; font-size: .9rem; }
+    .toc li { margin: .28rem 0; }
+    .thesis { border-left: 2px solid var(--gold); padding: .2rem 0 .2rem 1.45rem; }
+    .thesis h2 { margin: 0 0 .65rem; color: var(--teal); font: 700 .74rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+    .thesis p { margin: 0; font: 1.38rem/1.45 var(--serif); }
+    .section { margin: 3.2rem 0; scroll-margin-top: 1.5rem; }
+    .section-head { display: flex; align-items: baseline; gap: .8rem; border-bottom: 1px solid var(--line); padding-bottom: .7rem; margin-bottom: 1.2rem; }
+    .section-head .index { color: var(--coral); font: 700 .78rem var(--mono); }
+    h2 { margin: 0; font: 500 clamp(1.7rem, 3vw, 2.35rem) var(--serif); letter-spacing: -.025em; }
+    h3 { margin: 0 0 .5rem; font-size: 1.05rem; }
+    p { margin: .5rem 0 1rem; }
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .card { background: var(--white); border: 1px solid var(--line); padding: 1.2rem 1.3rem; }
+    .card.push { border-top: 4px solid var(--teal); }
+    .card.pull { border-top: 4px solid var(--gold); }
+    .tag { display: inline-block; margin-bottom: .65rem; color: var(--muted); font: 700 .68rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .card p:last-child { margin-bottom: 0; }
+    .callout { margin: 1rem 0; padding: 1rem 1.2rem; background: var(--teal-pale); border-left: 4px solid var(--teal); }
+    .callout.gold { background: var(--gold-pale); border-color: var(--gold); }
+    .callout strong { color: var(--teal); }
+    .flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin: 1.3rem 0; }
+    .flow div { min-height: 112px; padding: 1rem; background: var(--navy); color: #f7f5ed; }
+    .flow b { display: block; margin-bottom: .35rem; color: #f4dc9f; font: 700 .75rem var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+    .flow span { font-size: .9rem; }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .split h3 { color: var(--teal); }
+    ul, ol { padding-left: 1.25rem; }
+    li { margin: .36rem 0; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; background: var(--white); font-size: .92rem; }
+    th, td { padding: .8rem .9rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: var(--navy); color: #fff; font: 700 .75rem var(--mono); letter-spacing: .05em; }
+    td:first-child { width: 22%; font-weight: 700; }
+    .terms { display: grid; grid-template-columns: repeat(2, 1fr); gap: .55rem 1rem; }
+    .term { padding: .85rem 1rem; background: var(--white); border-left: 2px solid var(--gold); }
+    .term dt { color: var(--teal); font-weight: 700; }
+    .term dd { margin: .2rem 0 0; color: var(--muted); font-size: .93rem; }
+    details { margin: .65rem 0; background: var(--white); border: 1px solid var(--line); }
+    summary { cursor: pointer; padding: .85rem 1rem; font-weight: 700; }
+    details p { margin: 0; padding: 0 1rem 1rem; color: var(--muted); }
+    .recall { counter-reset: q; }
+    .recall details { counter-increment: q; }
+    .recall summary::before { content: "Q" counter(q, decimal-leading-zero) "  "; color: var(--coral); font: 700 .76rem var(--mono); }
+    .closing { margin-top: 3rem; padding: 1.4rem 1.5rem; background: var(--navy); color: #eef2eb; }
+    .closing h2 { color: #f4dc9f; font-size: 1.55rem; }
+    .closing p { margin-bottom: 0; }
+    footer { padding: 1.5rem 0; color: var(--muted); border-top: 1px solid var(--line); font-size: .82rem; }
+    @media (max-width: 760px) {
+      .topline { grid-template-columns: 1fr; gap: 1rem; }
+      .toc { position: static; }
+      .cards, .split, .terms { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .flow div { min-height: 0; }
+      .masthead { padding-top: 3rem; }
+      .masthead::after { opacity: .5; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { background: white; font-size: 11pt; }
+      .masthead { padding: 1.5rem; background: white; color: var(--ink); border-bottom: 2px solid var(--teal); }
+      .masthead .eyebrow, .dek { color: var(--muted); }
+      .masthead::after, .toc { display: none; }
+      h1 { font-size: 34pt; }
+      .layout { width: 100%; margin: 1rem auto; }
+      .topline { display: block; }
+      .card, .term, details, table { break-inside: avoid; }
+      details p { display: block; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="eyebrow">MGT6705 · Chapter 6</div>
+    <h1>Where innovation gets its start</h1>
+    <p class="dek">A study guide to the many forces that generate, shape, and redirect innovation—from organized R&amp;D to unmet needs, user communities, design, rules, and chance.</p>
+    <div class="hero-note">CORE MODEL: KNOWLEDGE PUSH + NEED PULL</div>
+  </header>
+
+  <main class="layout">
+    <div class="topline">
+      <nav class="toc" aria-label="Contents">
+        <h2>Guide map</h2>
+        <ol>
+          <li><a href="#core">The core model</a></li>
+          <li><a href="#needs">Needs, disruption &amp; markets</a></li>
+          <li><a href="#users">Users as innovators</a></li>
+          <li><a href="#tools">Tools for shaping ideas</a></li>
+          <li><a href="#other">Other sources of innovation</a></li>
+          <li><a href="#terms">Key terms</a></li>
+          <li><a href="#recall">Active recall</a></li>
+        </ol>
+      </nav>
+      <aside class="thesis">
+        <h2>Chapter thesis</h2>
+        <p>Innovations rarely arrive fully formed from one spark. They emerge as different sources of knowledge and demand interact over time—and as people test, adapt, recombine, and learn from ideas.</p>
+      </aside>
+    </div>
+
+    <section class="section" id="core">
+      <div class="section-head"><span class="index">A</span><h2>The core model: push meets pull</h2></div>
+      <p>Chapter 6 groups many triggers for innovation into two broad forces. They are useful categories, but they usually work together rather than in isolation.</p>
+      <div class="cards">
+        <article class="card push">
+          <span class="tag">Technology / knowledge led</span>
+          <h3>Knowledge push</h3>
+          <p>New knowledge, research, or technology creates possibilities that can be developed into products, services, or processes. Organized R&amp;D commits specialist people, equipment, facilities, and resources to important technical challenges.</p>
+          <p>Its pattern often combines occasional breakthroughs with long periods of incremental elaboration. Semiconductor development is one example: a breakthrough can establish a trajectory, then sustained improvement follows. Knowledge push can also seed entrepreneurial ventures.</p>
+        </article>
+        <article class="card pull">
+          <span class="tag">Need / demand led</span>
+          <h3>Need pull</h3>
+          <p>A real or perceived need for change creates demand for a solution. The management task is to understand what people need and find ways to meet it.</p>
+          <p>Most need-pull innovation is not “new to the world”; it extends, adapts, differentiates, or improves an existing idea. A strong need or urgent demand can force innovation forward.</p>
+        </article>
+      </div>
+      <div class="callout"><strong>Remember:</strong> knowledge push supplies a field of possibilities; need pull helps an idea find a reason and a context to take root. Innovation is often the result of their interplay.</div>
+      <div class="flow" aria-label="A simplified innovation cycle">
+        <div><b>Possibility</b><span>New knowledge, technology, or a newly noticed need opens a direction.</span></div>
+        <div><b>Experiment</b><span>People develop, combine, prototype, and test candidate responses.</span></div>
+        <div><b>Fit &amp; diffusion</b><span>Feedback shapes the idea; adoption and adaptation can spread it.</span></div>
+      </div>
+      <p><strong>Trajectory thinking:</strong> an initial breakthrough may set a direction for later search. Innovation then tends to move through incremental improvements around that trajectory, though another breakthrough may redirect it.</p>
+    </section>
+
+    <section class="section" id="needs">
+      <div class="section-head"><span class="index">B</span><h2>Needs, disruption &amp; changing markets</h2></div>
+      <p>Needs are not always obvious. They can be expressed by customers, observed in behavior, latent or underserved, or made more urgent by social conditions and crises. Understanding buyers and adopters helps organizations identify needs, but observation can reveal things people may not be able to articulate.</p>
+      <div class="split">
+        <div>
+          <h3>Finding and interpreting need</h3>
+          <ul>
+            <li><strong>Ethnography and empathic design:</strong> observe how people actually use products and services, rather than relying only on what they say.</li>
+            <li><strong>Segmentation and differentiation:</strong> especially in mature markets, offerings compete by matching different attributes and adopter types.</li>
+            <li><strong>Social innovation:</strong> innovation can address social needs and tailor public services, not only sell to consumers.</li>
+            <li><strong>Entrepreneurial opportunity:</strong> identify a need no one has addressed, or meet an existing need in a different way.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Incremental improvement and pressure</h3>
+          <ul>
+            <li>Much innovation is “doing what we do better,” with major leaps occurring less often.</li>
+            <li><strong>Kaizen</strong> emphasizes sustained, high-involvement incremental process improvement; related approaches include total quality management and lean thinking.</li>
+            <li>As industries mature, there are more alternatives and stronger pressure to differentiate around user needs.</li>
+            <li>As adoption grows, a bandwagon effect can accelerate uptake while the offering is adapted to new users.</li>
+          </ul>
+        </div>
+      </div>
+      <h3>Disruption starts at the edges</h3>
+      <p>Established firms may focus on existing customers and keep improving their current offer. Meanwhile, users at the edge of a market may be poorly served—or may be overserved by complexity and features they do not need. Entrepreneurs can build around those neglected conditions, changing the rules and creating new winners and losers.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Pattern</th><th>Starting point</th><th>Why it matters</th></tr></thead>
+          <tbody>
+            <tr><td>Low-end disruption</td><td>A simpler, cheaper, “good enough” offer for users who do not need or cannot afford the mainstream product.</td><td>Can challenge incumbents whose established systems are designed to deliver more than these users require.</td></tr>
+            <tr><td>High-end disruption</td><td>Users need performance above what current offerings provide.</td><td>A new level of performance can later become part of mainstream expectations.</td></tr>
+            <tr><td>Overserved market</td><td>Products accumulate features beyond what users need or can use.</td><td>Creates room for simpler alternatives and new value propositions.</td></tr>
+            <tr><td>Uncontested space</td><td>Latent needs are poorly served or overlooked.</td><td>Blue Ocean thinking seeks new market space rather than competing only on existing terms.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout gold"><strong>Emerging markets / Bottom of the Pyramid (BoP):</strong> large populations with low disposable incomes can contain major unmet needs. Meeting them may require substantial reconfiguration and innovation, with examples in areas such as healthcare, agriculture, and household goods. Solutions developed for different conditions can create new trajectories—not just cheaper versions of existing products.</div>
+      <h3>Variety, customization, and services</h3>
+      <p>Mass production makes goods widely available, while varied preferences increase demand for differentiation. <strong>Mass customization</strong> uses enabling technologies to offer configurations suited to different segments while trying to avoid the usual cost penalty of customization. The same logic applies to social and public services: a one-size-fits-all model may not work for different groups. Service innovations can be valuable but are often easier to imitate, making advantages harder to protect.</p>
+    </section>
+
+    <section class="section" id="users">
+      <div class="section-head"><span class="index">C</span><h2>Users are more than customers</h2></div>
+      <p>Users can identify needs, invent their own solutions, share improvements, and participate in creating innovations. The process is not simply “ask customers what they want, then build it”: users may innovate before a general market exists, and innovators may initially be motivated by personal use rather than commercialization.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="tag">Individual &amp; community</span>
+          <h3>User innovation</h3>
+          <p>People sometimes develop a solution because they want to improve something for themselves. Communities can create and use innovations over time, sharing them with peers through <em>free revealing</em>.</p>
+          <p>Sharing may be driven by intrinsic motives—helping others or improving a product—as well as peer recognition and community status.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Many perspectives</span>
+          <h3>Crowdsourcing &amp; citizen-sourcing</h3>
+          <p>Communication technologies make it easier to gather ideas from people with different expertise and perspectives. Innovation contests, online communities, and co-creation platforms draw users into the front end of innovation.</p>
+          <p>Citizen-sourcing applies this idea to public services—for example, residents reporting local infrastructure problems and proposing fixes.</p>
+        </article>
+      </div>
+      <ul>
+        <li><strong>Long tail:</strong> a community can help serve a small number of people with a specific need that is not economical to address through a mass-market offer alone.</li>
+        <li><strong>Lead users:</strong> users with needs ahead of the broader market may provide early clues to future demand.</li>
+        <li><strong>Extreme environments:</strong> demanding conditions stretch design. Solutions that work for “tough customers” may later prove useful in mainstream settings.</li>
+        <li><strong>Diffusion takes time:</strong> user innovations may exist well before widespread adoption; diffusion across firms and industries can take many years.</li>
+      </ul>
+      <div class="callout"><strong>Study distinction:</strong> user engagement is an input to innovation, not a guarantee of market success. An idea still needs to be developed, tested, adapted, and matched to a viable use.</div>
+    </section>
+
+    <section class="section" id="tools">
+      <div class="section-head"><span class="index">D</span><h2>Shape ideas by making them tangible</h2></div>
+      <p>Whether an idea comes from research or a need, it is rarely perfect at birth. Early feedback helps teams modify and configure it so that people understand, value, and can use it. Prototypes invite potential users and other perspectives into the work before a solution is locked in.</p>
+      <h3>What prototypes make possible</h3>
+      <div class="split">
+        <ul>
+          <li>Act as a <strong>boundary object</strong> that different people can gather around.</li>
+          <li>Make an idea concrete enough to inspect without committing to it too early.</li>
+          <li>Let teams explore multiple alternatives instead of prematurely choosing one.</li>
+          <li>Generate learning—even when a prototype fails.</li>
+        </ul>
+        <ul>
+          <li>Reveal new questions and possibilities by exposing the problem to closer examination.</li>
+          <li>Give form to hunches and half-formed ideas.</li>
+          <li>Show unexpected effects when elements interact.</li>
+          <li>Refine a known solution, test usability, and uncover bugs.</li>
+        </ul>
+      </div>
+      <div class="callout gold"><strong>Lean start-up connection:</strong> a minimum viable product (MVP) puts a basic version into use so a venture can learn quickly and adapt. Evidence may show that the idea needs a <em>pivot</em>—a change in how value is delivered or which problem is addressed.</div>
+    </section>
+
+    <section class="section" id="other">
+      <div class="section-head"><span class="index">E</span><h2>Other routes to innovation</h2></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Source or approach</th><th>How it generates ideas</th><th>What to remember</th></tr></thead>
+          <tbody>
+            <tr><td>Imitation &amp; benchmarking</td><td>Observe, reverse-engineer, and make structured comparisons with other organizations or sectors.</td><td>Learning can come from close competitors or from distant fields with analogous processes.</td></tr>
+            <tr><td>Recombinant innovation</td><td>Transfer or combine ideas that are familiar in one context but new in another.</td><td>Open innovation increases knowledge flows into and out of organizations. Breakthroughs can arise by connecting seemingly unrelated ideas (“bisociation”).</td></tr>
+            <tr><td>Design-driven innovation</td><td>Use design to give products meaning, shape, usability, and qualities people may not yet know to ask for.</td><td>It is distinct from both simply responding to stated needs and adding more technical functions.</td></tr>
+            <tr><td>Experience innovation</td><td>Differentiate through the meaning and psychological character of an experience.</td><td>Especially relevant in services and the “experience economy,” where experience can matter beyond basic need fulfillment.</td></tr>
+            <tr><td>Regulation / deregulation</td><td>Rules can constrain some directions while mandating or opening others; relaxed controls can create new space.</td><td>Regulation can also provoke counter-innovation: solutions designed to work around or bend rules.</td></tr>
+            <tr><td>Alternative futures</td><td>Imagine trajectories different from the dominant version in current use; use scenarios, concept models, or prototypes.</td><td>Transitional objects focus reactions and invite input that can shape future offerings.</td></tr>
+            <tr><td>Accidents &amp; unexpected events</td><td>An unplanned event can reveal a surprising line of attack.</td><td>Organizations need time and space to experiment and fail—and the openness to notice and act when something unexpected happens.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout"><strong>Open innovation:</strong> knowledge can flow across organizational boundaries, widening the pool of ideas and combinations. Innovation management is partly about creating conditions where useful inputs can be noticed, tested, and developed.</div>
+    </section>
+
+    <section class="section" id="terms">
+      <div class="section-head"><span class="index">F</span><h2>Key terms to know</h2></div>
+      <dl class="terms">
+        <div class="term"><dt>Knowledge push</dt><dd>Innovation opportunities driven by new knowledge, research, or technology.</dd></div>
+        <div class="term"><dt>Need pull</dt><dd>Innovation stimulated by a real or perceived need for change.</dd></div>
+        <div class="term"><dt>Trajectory</dt><dd>A direction of development established by an innovation or breakthrough and extended through further improvement.</dd></div>
+        <div class="term"><dt>Disruptive innovation</dt><dd>Innovation that changes market rules, often by serving overlooked users or unmet needs at the edge.</dd></div>
+        <div class="term"><dt>Mass customization</dt><dd>Configuring offerings for different preferences while limiting the cost penalty of customization.</dd></div>
+        <div class="term"><dt>Free revealing</dt><dd>Sharing an innovation openly with peers rather than keeping it proprietary.</dd></div>
+        <div class="term"><dt>Lead user</dt><dd>A user whose needs are ahead of the general market and may signal future opportunities.</dd></div>
+        <div class="term"><dt>Boundary object</dt><dd>A tangible prototype or artifact that lets people with different perspectives collaborate.</dd></div>
+        <div class="term"><dt>Recombinant innovation</dt><dd>Moving or combining existing ideas in new contexts to create something useful or novel.</dd></div>
+        <div class="term"><dt>Design-driven innovation</dt><dd>Innovation led by design that creates new meaning, form, or experience—not just more functionality.</dd></div>
+        <div class="term"><dt>Counter-innovation</dt><dd>A solution developed in response to rules, often to work around or exploit constraints.</dd></div>
+        <div class="term"><dt>Serendipity</dt><dd>A valuable discovery that emerges unexpectedly and is recognized and acted upon.</dd></div>
+      </dl>
+    </section>
+
+    <section class="section" id="recall">
+      <div class="section-head"><span class="index">G</span><h2>Active recall: check your understanding</h2></div>
+      <p>Try answering from memory before opening each prompt. Use the reveal to check and strengthen your answer.</p>
+      <div class="recall">
+        <details><summary>How do knowledge push and need pull differ, and why do they often interact?</summary><p>Knowledge push begins with new research, knowledge, or technology that creates possibilities. Need pull begins with a need or demand that calls for a response. A technology may need a meaningful use or demand, while a need may require new knowledge or technology to meet it—so successful innovation often combines both.</p></details>
+        <details><summary>Why are most innovations incremental rather than “new to the world”?</summary><p>Breakthroughs are relatively rare. Once a useful idea or trajectory exists, much innovation extends, differentiates, adapts, or improves it over time.</p></details>
+        <details><summary>How can an underserved or overserved group create an opening for disruption?</summary><p>Incumbents may focus on mainstream customers and offer more performance or features than some users need. A simpler, cheaper “good enough” offer can serve neglected users; alternatively, users needing much higher performance can create a high-end opening that later shifts mainstream expectations.</p></details>
+        <details><summary>What makes user innovation and crowdsourcing valuable?</summary><p>Users encounter needs directly, may develop solutions before a broad market exists, and can contribute diverse perspectives. Communities can share ideas, serve niche needs, and co-create solutions. Participation does not automatically guarantee commercial success.</p></details>
+        <details><summary>List four ways prototypes help innovation teams.</summary><p>They create a shared boundary object; make ideas tangible without locking teams in; support exploration of multiple options; enable learning from failure; reveal new possibilities; and help test, refine, and debug solutions.</p></details>
+        <details><summary>Explain recombinant innovation and give the chapter’s creativity connection.</summary><p>Recombinant innovation transfers or combines ideas across contexts. Arthur Koestler’s idea of “bisociation” describes bringing apparently unrelated things together to produce insight.</p></details>
+        <details><summary>How can regulation both constrain and stimulate innovation?</summary><p>Rules close off some options but can mandate change or open new directions; deregulation may create additional space. Constraints can also prompt counter-innovations that work around or bend existing rules.</p></details>
+        <details><summary>What conditions help turn accidents into innovation?</summary><p>Time and space to experiment and fail, an open mind, and the ability to notice and act on unexpected events. Chance is more useful to a prepared organization.</p></details>
+        <details><summary>What is the central management challenge at the end of Chapter 6?</summary><p>Innovation opportunities come from many directions, but resources are limited. Organizations need a deliberate search strategy to decide where and why to look for innovation triggers—the focus of the next chapter.</p></details>
+      </div>
+    </section>
+
+    <aside class="closing">
+      <h2>One-sentence takeaway</h2>
+      <p>Innovation is a managed search across interacting sources—knowledge, needs, users, markets, design, rules, and chance—where ideas become valuable through feedback, adaptation, and fit.</p>
+    </aside>
+    <footer>Prepared from the Chapter 6 highlights in <strong>NOTES</strong>. Use the questions above for retrieval practice, then revisit the original reading for examples and context.</footer>
+  </main>
+</body>
+</html>
