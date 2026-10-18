@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Chapter 7 study guide on searching for innovation opportunities, managing exploration, and building absorptive capacity." />
+    <title>Chapter 7 Study Guide | Managing Innovation</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17233b;
+        --muted: #5b6880;
+        --paper: #f4f6fa;
+        --line: #dce3ed;
+        --blue: #3157d5;
+        --gold: #f1b84b;
+        --teal: #247766;
+        --purple: #7150ad;
+        --white: #fff;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
+      a { color: var(--blue); }
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(3rem, 8vw, 6rem) 1.25rem 3.5rem;
+        color: var(--white);
+        background: linear-gradient(125deg, #142344, #233e83 68%, #3157d5);
+        border-bottom: 6px solid var(--gold);
+      }
+      .hero::after {
+        position: absolute;
+        top: -11rem;
+        right: -5rem;
+        width: 30rem;
+        height: 30rem;
+        border: 1px solid #ffffff2b;
+        border-radius: 50%;
+        box-shadow: 0 0 0 42px #ffffff09, 0 0 0 84px #ffffff08;
+        content: "";
+      }
+      .hero-inner, main, footer { width: min(1000px, calc(100% - 2rem)); margin-inline: auto; }
+      .hero-inner { position: relative; z-index: 1; }
+      .eyebrow, .label, .pill {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: .75rem;
+        font-weight: 750;
+        letter-spacing: .09em;
+        text-transform: uppercase;
+      }
+      .eyebrow { margin: 0 0 1rem; color: #ffd782; }
+      h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+      h1 { max-width: 780px; margin: 0; font-size: clamp(3rem, 8vw, 6rem); letter-spacing: -.055em; line-height: .98; }
+      .subtitle { max-width: 700px; margin: 1.25rem 0 0; color: #d7e1f5; font-size: clamp(1.05rem, 2vw, 1.25rem); }
+      .hero-meta { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+      .pill { padding: .4rem .65rem; color: #fff; border: 1px solid #ffffff55; border-radius: 999px; letter-spacing: .04em; }
+      main { padding-block: 2.5rem 4rem; }
+      .layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 2rem; align-items: start; }
+      .toc { position: sticky; top: 1rem; padding: 1.15rem; background: #fff; border: 1px solid var(--line); }
+      .toc strong { display: block; margin-bottom: .65rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; font-weight: 400; }
+      .toc a { display: block; padding: .28rem 0; color: var(--muted); font-size: .88rem; text-decoration: none; }
+      .toc a:hover, .toc a:focus-visible { color: var(--blue); text-decoration: underline; }
+      section { scroll-margin-top: 1rem; margin-bottom: 2.25rem; }
+      h2 { margin: 0 0 .8rem; font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.035em; line-height: 1.15; }
+      h3 { margin: 0 0 .45rem; font-size: 1.35rem; line-height: 1.2; }
+      p { margin: .45rem 0 .8rem; }
+      .section-intro { max-width: 760px; color: var(--muted); }
+      .card, .callout { padding: 1.2rem 1.3rem; background: var(--white); border: 1px solid var(--line); }
+      .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+      .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .card p:last-child { margin-bottom: 0; }
+      .card .label { display: inline-block; margin-bottom: .45rem; color: var(--blue); }
+      .callout { margin: 1rem 0; background: #e9eef8; border: 0; border-left: 4px solid var(--gold); }
+      .callout strong { color: #233e83; }
+      .table-wrap { overflow-x: auto; background: #fff; border: 1px solid var(--line); }
+      table { width: 100%; border-collapse: collapse; text-align: left; }
+      th, td { padding: .85rem .95rem; vertical-align: top; border-bottom: 1px solid var(--line); }
+      th { color: #233e83; background: #edf1f8; font-size: .82rem; letter-spacing: .04em; text-transform: uppercase; }
+      tr:last-child td { border-bottom: 0; }
+      td:first-child { min-width: 145px; font-weight: 750; }
+      .zone { display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; margin-right: .4rem; color: #fff; background: var(--blue); border-radius: 50%; font-size: .9rem; }
+      tbody tr:nth-child(2) .zone { background: var(--teal); }
+      tbody tr:nth-child(3) .zone { background: var(--purple); }
+      tbody tr:nth-child(4) .zone { background: #bd7a19; }
+      .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .65rem; margin: 1rem 0; }
+      .step { padding: 1rem; background: #fff; border-top: 3px solid var(--blue); }
+      .step:nth-child(2) { border-color: var(--teal); }
+      .step:nth-child(3) { border-color: var(--purple); }
+      .step:nth-child(4) { border-color: #bd7a19; }
+      .step b { display: block; margin-bottom: .3rem; }
+      .term-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem 1.2rem; }
+      .term-list div { padding-bottom: .65rem; border-bottom: 1px solid var(--line); }
+      .term-list dt { font-weight: 800; }
+      .term-list dd { margin: .15rem 0 0; color: var(--muted); }
+      details { margin: .65rem 0; padding: .85rem 1rem; background: #fff; border: 1px solid var(--line); }
+      summary { cursor: pointer; font-weight: 750; }
+      details p { margin-bottom: .1rem; color: var(--muted); }
+      .footer-nav { margin-bottom: 1rem; font-size: .9rem; }
+      footer { padding-block: 1.5rem 2.5rem; color: var(--muted); border-top: 1px solid var(--line); font-size: .82rem; }
+      @media (max-width: 760px) {
+        .layout { grid-template-columns: 1fr; }
+        .toc { position: static; }
+        .toc nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1rem; }
+        .card-grid.three { grid-template-columns: 1fr; }
+        .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (max-width: 520px) {
+        .card-grid, .term-list, .steps { grid-template-columns: 1fr; }
+        th, td { padding: .7rem; }
+      }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      @media print {
+        body { background: #fff; font-size: 10pt; }
+        .hero { padding: 1.5rem; color: #17233b; background: #fff; border: 2px solid #233e83; }
+        .hero::after, .toc, .footer-nav { display: none; }
+        .eyebrow, .subtitle { color: #233e83; }
+        .layout { display: block; }
+        main { width: 100%; padding: 1rem 0; }
+        .card, .callout, details, .step { break-inside: avoid; }
+        details:not([open]) > *:not(summary) { display: block; }
+        a { color: inherit; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">MGT6705 · Managing Innovation</p>
+        <h1>Searching for<br />Innovation</h1>
+        <p class="subtitle">Chapter 7 study guide · How organizations recognize opportunities, search for knowledge, and balance improvement with renewal.</p>
+        <div class="hero-meta"><span class="pill">Key ideas</span><span class="pill">Frameworks</span><span class="pill">Recall practice</span></div>
+      </div>
+    </header>
+    <main>
+      <div class="layout">
+        <aside class="toc" aria-label="Contents">
+          <strong>In this guide</strong>
+          <nav>
+            <a href="#overview">Chapter overview</a>
+            <a href="#push-pull">Push, pull &amp; change</a>
+            <a href="#exploit-explore">Exploit and explore</a>
+            <a href="#search-space">Map the search space</a>
+            <a href="#knowledge">Knowledge and networks</a>
+            <a href="#absorptive">Absorptive capacity</a>
+            <a href="#practice">Review questions</a>
+          </nav>
+        </aside>
+        <div class="content">
+          <section id="overview">
+            <h2>Chapter overview</h2>
+            <p class="section-intro">Innovation opportunities are abundant, but organizations differ in what they notice, where they search, and how well they turn what they find into action. Chapter 7 treats search as a strategic capability: cast the net widely, look through multiple lenses, and build the learning capacity to use new knowledge.</p>
+            <div class="callout"><strong>Big idea:</strong> Strong innovation search balances competing needs—known and novel, near and far, short and long term—and connects discovery to the ability to absorb and apply knowledge.</div>
+          </section>
+
+          <section id="push-pull">
+            <h2>1 · Innovation is interaction</h2>
+            <p>Innovation can begin with a technology or knowledge <b>push</b>, a market or user <b>pull</b>, or forces such as regulation. The notes emphasize that innovation rarely comes from push or pull alone: needs often select and shape which knowledge-based possibilities become important, while regulation can both direct innovation and create demand for it.</p>
+            <div class="card-grid three">
+              <article class="card"><span class="label">Knowledge / technology push</span><p>New knowledge or capability opens possibilities. Search asks what new applications a capability could enable.</p></article>
+              <article class="card"><span class="label">Need / market pull</span><p>Users, customers, or unmet needs point toward problems worth solving and help select among possibilities.</p></article>
+              <article class="card"><span class="label">Regulation &amp; users</span><p>Rules can steer or stimulate change. Users may also invent new solutions themselves, pushing possibility in new directions.</p></article>
+            </div>
+            <div class="callout"><strong>Remember:</strong> Ask how push and pull interact in a particular case—not which one is universally more important.</div>
+          </section>
+
+          <section id="exploit-explore">
+            <h2>2 · Exploitation, exploration, and ambidexterity</h2>
+            <div class="table-wrap"><table>
+              <thead><tr><th>Dimension</th><th>Exploitation</th><th>Exploration</th></tr></thead>
+              <tbody>
+                <tr><td>Core question</td><td>How can we do what we already do better?</td><td>What different direction or new knowledge could change what we do?</td></tr>
+                <tr><td>Innovation pattern</td><td>Incremental, frequent, small-scale improvement; leverages established knowledge.</td><td>Radical, occasional, higher-risk search; reaches beyond the current domain.</td></tr>
+                <tr><td>Organization</td><td>Structured routines, often embedded in operating units.</td><td>Looser, cross-functional combinations of resources; room for experimentation.</td></tr>
+                <tr><td>Risk</td><td>More familiar and predictable, but can reinforce path dependency.</td><td>Uncertain and costly, but may open a new trajectory or competitive position.</td></tr>
+              </tbody>
+            </table></div>
+            <p>Most firms need a portfolio: many lower-risk improvements alongside a smaller number of longer-range, higher-risk opportunities. This capacity to work both sides is called <b>ambidexterity</b>. It is difficult because the routines that efficiently exploit existing knowledge can crowd out signals that call for exploration.</p>
+            <div class="card-grid">
+              <article class="card"><h3>Punctuated equilibrium</h3><p>Innovation often proceeds through extended periods of elaboration within an established trajectory, interrupted by breakthroughs that establish a new one.</p></article>
+              <article class="card"><h3>Timing and diffusion</h3><p>Adoption is gradual, often S-shaped: innovative users and early adopters are followed by the majority and then laggards or persistent non-adopters. Early in a technology life cycle, experimentation and product innovation are prominent.</p></article>
+            </div>
+            <div class="callout"><strong>Incumbent trap:</strong> Established firms may focus on their current value network, routines, and rewards. Sunk costs and the “sailing ship effect”—intensifying improvement of an older technology when a new one appears—can delay response to emerging alternatives.</div>
+          </section>
+
+          <section id="search-space">
+            <h2>3 · Map the innovation search space</h2>
+            <p>Use several complementary lenses. The <b>4Ps</b> point to the directions in which innovation may occur; distance and time horizons help decide how broadly and how far ahead to search.</p>
+            <div class="card-grid">
+              <article class="card"><span class="label">4Ps · direction</span><p><b>Product/service</b> offering · <b>Process</b> of creating or delivering it · <b>Position</b> in the market or context of use · <b>Paradigm</b> (the underlying mental model or business logic).</p></article>
+              <article class="card"><span class="label">Search lenses · proximity</span><p><b>Microscope:</b> detailed search in the core. <b>Telescope:</b> adjacent opportunities. <b>Radio telescope:</b> peripheral weak signals that may foreshadow transformation. Keep all three in the portfolio.</p></article>
+            </div>
+            <p>Also vary the <b>time horizon</b>: maintain attention to the current business, emerging opportunities, and longer-term possibilities. Search should include alternative frames—looking at the organization or industry through fresh eyes.</p>
+            <h3 style="margin-top:1.35rem">Four zones of innovation search</h3>
+            <p>The map combines the degree of change (incremental to radical) with the degree of environmental complexity and whether the existing frame is retained or changed.</p>
+            <div class="table-wrap"><table>
+              <thead><tr><th>Zone</th><th>Search logic</th><th>Typical emphasis</th></tr></thead>
+              <tbody>
+                <tr><td><span class="zone">1</span>Business as usual</td><td>Incremental improvement within a stable, shared frame.</td><td>Exploit: refine products/processes and deepen established relationships.</td></tr>
+                <tr><td><span class="zone">2</span>Bounded exploration</td><td>Search into new territory, while retaining the accepted business model and frame.</td><td>Push known frontiers; strategic R&amp;D bets, IP positioning, and technology trajectories.</td></tr>
+                <tr><td><span class="zone">3</span>Alternative frame</td><td>Reframe the opportunity by combining elements in a different way; a new frame need not mean wholly new technology or markets.</td><td>Explore alternative architectures and configurations; often requires new networks and a fresh mindset.</td></tr>
+                <tr><td><span class="zone">4</span>Edge of chaos</td><td>New possibilities emerge through coevolution among many interacting elements; no predefined path.</td><td>Amplification and feedback turn small shifts into a trajectory; a dominant design may eventually emerge.</td></tr>
+              </tbody>
+            </table></div>
+            <p>Zones 1 and 2 search within a familiar frame. Zones 3 and 4 involve alternative architectures or emergent ones, and are harder for established organizations because routines, artifacts, incentives, and dominant assumptions can bound what they see.</p>
+          </section>
+
+          <section id="knowledge">
+            <h2>4 · Knowledge moves through people</h2>
+            <p>Knowledge is social: people carry, communicate, translate, and combine it. Broad, “cosmopolitan” connections can expose a firm to more sources than a narrow, parochial search.</p>
+            <dl class="term-list">
+              <div><dt>Knowledge networks</dt><dd>Relationships and clusters through which information and expertise circulate.</dd></div>
+              <div><dt>Brokers / connectors</dt><dd>People who bridge distinct knowledge worlds and help useful knowledge cross boundaries.</dd></div>
+              <div><dt>Structural hole</dt><dd>A gap between groups holding different, nonredundant information; a broker can connect them.</dd></div>
+              <div><dt>Technological gatekeeper</dt><dd>Recognizes relevant external knowledge and has internal connections to route it to the right people.</dd></div>
+              <div><dt>Allen curve</dt><dd>Communication frequency tends to fall as physical distance between people increases.</dd></div>
+              <div><dt>Community of practice</dt><dd>A group whose shared work and interaction concentrate specialist knowledge and support learning.</dd></div>
+              <div><dt>Knowledge architecture</dt><dd>The arrangement of knowledge and relationships that helps a community handle change within an established configuration, but may make a new configuration harder to see.</dd></div>
+              <div><dt>Knowledge work</dt><dd>Transform tacit know-how, articulate employees’ practical knowledge, and assimilate external knowledge into active use.</dd></div>
+            </dl>
+            <div class="callout"><strong>Practical implication:</strong> Innovation search should mobilize multiple channels: employees, R&amp;D, sales, purchasing, customers, suppliers, and wider networks. Ordinary employees’ experience can reveal improvement opportunities that formal systems miss.</div>
+          </section>
+
+          <section id="absorptive">
+            <h2>5 · Absorptive capacity: learn to learn</h2>
+            <p><b>Absorptive capacity (AC)</b> is a firm’s ability to recognize the value of external knowledge, assimilate it, and apply it to commercial ends. It depends partly on prior related knowledge: a firm is better at recognizing and using knowledge when it has a foundation that helps it understand the new information.</p>
+            <div class="steps" aria-label="Absorptive capacity sequence">
+              <div class="step"><b>1. Search &amp; acquire</b>Find and access relevant knowledge (potential AC).</div>
+              <div class="step"><b>2. Assimilate</b>Understand and make sense of what has been acquired.</div>
+              <div class="step"><b>3. Transform</b>Combine new knowledge with what the organization already knows.</div>
+              <div class="step"><b>4. Exploit</b>Apply it in implementation and value creation (realized AC).</div>
+            </div>
+            <p>Finding knowledge is not enough: potential AC does not automatically become innovation. The links between acquisition, assimilation, transformation, and exploitation matter. AC is not limited to formal R&amp;D or large firms; learning in SMEs and process improvement also count.</p>
+            <div class="card-grid">
+              <article class="card"><h3>Adaptive learning</h3><p>Establishes and reinforces routines for handling a given level of environmental complexity.</p></article>
+              <article class="card"><h3>Generative learning</h3><p>Builds the capacity to take on new levels of complexity and respond to unfamiliar conditions.</p></article>
+            </div>
+            <p>Organizations can support search through varied structures, such as balancing applied R&amp;D with “blue sky” work, and by involving employees through suggestion systems, problem-solving groups, innovation jams, intrapreneurship, and tacitly supported “bootlegging.” Strong customer and supplier ties, including supply-chain learning, also help knowledge move.</p>
+          </section>
+
+          <section id="practice">
+            <h2>Check your understanding</h2>
+            <p class="section-intro">Try answering from memory first. Open each prompt to compare your response with the key idea.</p>
+            <details><summary>1. Why is innovation better explained by push–pull interaction than by choosing one source?</summary><p>Knowledge and technology create possibilities, while needs can select and shape which possibilities matter. Regulation and user-led problem solving can influence both sides.</p></details>
+            <details><summary>2. How do exploitation and exploration differ, and why does a firm need both?</summary><p>Exploitation improves and leverages known knowledge; exploration seeks new knowledge and directions at greater risk. A portfolio needs reliable improvement and the possibility of breakthrough or renewal—ambidexterity.</p></details>
+            <details><summary>3. What do the microscope, telescope, and radio telescope represent?</summary><p>Search in the core, in adjacent areas, and at the periphery for weak signals. A robust search portfolio balances all three.</p></details>
+            <details><summary>4. Distinguish Zones 2 and 3.</summary><p>Zone 2 explores new territory but within the established frame. Zone 3 changes the frame, seeking alternative architectures and combinations.</p></details>
+            <details><summary>5. Why can incumbent firms miss disruptive opportunities?</summary><p>Established search routines, rewards, sunk costs, and continued improvement of an older technology can keep attention inside the existing value network and delay response to peripheral change.</p></details>
+            <details><summary>6. What is the difference between potential and realized absorptive capacity?</summary><p>Potential AC covers acquiring and assimilating external knowledge. Realized AC adds transformation and exploitation—the capabilities needed to put knowledge to use.</p></details>
+            <details><summary>7. Name three ways an organization can widen its knowledge search.</summary><p>Examples include connecting sales and purchasing to external signals; building relationships with customers and suppliers; using brokers/gatekeepers; enabling employee suggestion and problem-solving; and exploring broader networks.</p></details>
+            <details><summary>8. How do adaptive and generative learning complement each other?</summary><p>Adaptive learning strengthens routines for current complexity; generative learning helps the organization cope with new levels of complexity.</p></details>
+            <div class="callout"><strong>Short-answer synthesis:</strong> An effective innovation search strategy maps opportunities across direction (4Ps), distance (core, adjacent, peripheral), time horizons, and search mode (exploit/explore and existing/new frame). It then builds networks and absorptive capacity so discoveries can be recognized, assimilated, transformed, and applied.</div>
+          </section>
+          <p class="footer-nav"><a href="index.html">← Back to all study guides</a></p>
+        </div>
+      </div>
+    </main>
+    <footer>MGT6705 · Managing Innovation · Chapter 7 study guide</footer>
+  </body>
+</html>
