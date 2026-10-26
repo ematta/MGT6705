@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Chapter 8 study guide on innovation networks, open innovation, partner formation, and network management." />
+    <title>Chapter 8 Study Guide | Managing Innovation</title>
+    <style>
+      :root { color-scheme: light; --ink: #17233b; --muted: #5b6880; --paper: #f4f6fa; --line: #dce3ed; --blue: #3157d5; --gold: #f1b84b; --teal: #247766; --purple: #7150ad; --white: #fff; }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.65; }
+      a { color: var(--blue); }
+      .hero { position: relative; overflow: hidden; padding: clamp(3rem, 8vw, 6rem) 1.25rem 3.5rem; color: var(--white); background: linear-gradient(125deg, #142344, #233e83 68%, #3157d5); border-bottom: 6px solid var(--gold); }
+      .hero::after { position: absolute; top: -11rem; right: -5rem; width: 30rem; height: 30rem; border: 1px solid #ffffff2b; border-radius: 50%; box-shadow: 0 0 0 42px #ffffff09, 0 0 0 84px #ffffff08; content: ""; }
+      .hero-inner, main, footer { width: min(1000px, calc(100% - 2rem)); margin-inline: auto; }
+      .hero-inner { position: relative; z-index: 1; }
+      .eyebrow, .label, .pill { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .75rem; font-weight: 750; letter-spacing: .09em; text-transform: uppercase; }
+      .eyebrow { margin: 0 0 1rem; color: #ffd782; }
+      h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+      h1 { max-width: 780px; margin: 0; font-size: clamp(3rem, 8vw, 6rem); letter-spacing: -.055em; line-height: .98; }
+      .subtitle { max-width: 700px; margin: 1.25rem 0 0; color: #d7e1f5; font-size: clamp(1.05rem, 2vw, 1.25rem); }
+      .hero-meta { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+      .pill { padding: .4rem .65rem; color: #fff; border: 1px solid #ffffff55; border-radius: 999px; letter-spacing: .04em; }
+      main { padding-block: 2.5rem 4rem; }
+      .layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 2rem; align-items: start; }
+      .toc { position: sticky; top: 1rem; padding: 1.15rem; background: #fff; border: 1px solid var(--line); }
+      .toc strong { display: block; margin-bottom: .65rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; font-weight: 400; }
+      .toc a { display: block; padding: .28rem 0; color: var(--muted); font-size: .88rem; text-decoration: none; }
+      .toc a:hover, .toc a:focus-visible { color: var(--blue); text-decoration: underline; }
+      section { scroll-margin-top: 1rem; margin-bottom: 2.25rem; }
+      h2 { margin: 0 0 .8rem; font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.035em; line-height: 1.15; }
+      h3 { margin: 0 0 .45rem; font-size: 1.35rem; line-height: 1.2; }
+      p { margin: .45rem 0 .8rem; }
+      .section-intro { max-width: 760px; color: var(--muted); }
+      .card, .callout { padding: 1.2rem 1.3rem; background: var(--white); border: 1px solid var(--line); }
+      .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+      .card-grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .card p:last-child { margin-bottom: 0; }
+      .card .label { display: inline-block; margin-bottom: .45rem; color: var(--blue); }
+      .callout { margin: 1rem 0; background: #e9eef8; border: 0; border-left: 4px solid var(--gold); }
+      .callout strong { color: #233e83; }
+      .table-wrap { overflow-x: auto; background: #fff; border: 1px solid var(--line); }
+      table { width: 100%; border-collapse: collapse; text-align: left; }
+      th, td { padding: .85rem .95rem; vertical-align: top; border-bottom: 1px solid var(--line); }
+      th { color: #233e83; background: #edf1f8; font-size: .82rem; letter-spacing: .04em; text-transform: uppercase; }
+      tr:last-child td { border-bottom: 0; }
+      td:first-child { min-width: 145px; font-weight: 750; }
+      .term-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem 1.2rem; }
+      .term-list div { padding-bottom: .65rem; border-bottom: 1px solid var(--line); }
+      .term-list dt { font-weight: 800; }
+      .term-list dd { margin: .15rem 0 0; color: var(--muted); }
+      details { margin: .65rem 0; padding: .85rem 1rem; background: #fff; border: 1px solid var(--line); }
+      summary { cursor: pointer; font-weight: 750; }
+      details p { margin-bottom: .1rem; color: var(--muted); }
+      .footer-nav { margin-bottom: 1rem; font-size: .9rem; }
+      footer { padding-block: 1.5rem 2.5rem; color: var(--muted); border-top: 1px solid var(--line); font-size: .82rem; }
+      @media (max-width: 760px) { .layout { grid-template-columns: 1fr; } .toc { position: static; } .toc nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1rem; } .card-grid.three { grid-template-columns: 1fr; } }
+      @media (max-width: 520px) { .card-grid, .term-list { grid-template-columns: 1fr; } th, td { padding: .7rem; } }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      @media print { body { background: #fff; font-size: 10pt; } .hero { padding: 1.5rem; color: #17233b; background: #fff; border: 2px solid #233e83; } .hero::after, .toc, .footer-nav { display: none; } .eyebrow, .subtitle { color: #233e83; } .layout { display: block; } main { width: 100%; padding: 1rem 0; } .card, .callout, details { break-inside: avoid; } details:not([open]) > *:not(summary) { display: block; } a { color: inherit; } }
+    </style>
+  </head>
+  <body>
+    <header class="hero"><div class="hero-inner">
+      <p class="eyebrow">MGT6705 · Managing Innovation</p>
+      <h1>Innovation<br />Networks</h1>
+      <p class="subtitle">Chapter 8 study guide · How organizations connect knowledge, people, and resources to develop and scale innovation.</p>
+      <div class="hero-meta"><span class="pill">Key ideas</span><span class="pill">Frameworks</span><span class="pill">Recall practice</span></div>
+    </div></header>
+    <main><div class="layout">
+      <aside class="toc" aria-label="Contents"><strong>In this guide</strong><nav>
+        <a href="#overview">Chapter overview</a><a href="#network-basics">Network basics</a><a href="#network-types">Network forms</a><a href="#value">Value and scaling</a><a href="#open-innovation">Open innovation</a><a href="#partnering">Finding and forming partners</a><a href="#management">Managing networks</a><a href="#terms">Key terms</a><a href="#practice">Review questions</a>
+      </nav></aside>
+      <div class="content">
+        <section id="overview">
+          <h2>Chapter overview</h2>
+          <p class="section-intro">Innovation depends on knowledge, and knowledge moves through relationships. Chapter 8 treats innovation as a multiplayer process: firms combine internal expertise with suppliers, users, universities, investors, governments, and other organizations. Effective networks can deliver more than the sum of separate contributions, but they require active coordination and trust.</p>
+          <div class="callout"><strong>Big idea:</strong> Build and manage relationships that connect complementary knowledge and assets, while keeping the network focused on shared value and learning.</div>
+        </section>
+        <section id="network-basics">
+          <h2>1 · What makes a network?</h2>
+          <p>A network is a system of <b>nodes</b> (people, firms, teams, universities, or other actors) connected by <b>links</b> (relationships and interactions). Its value comes not only from individual ties, but also from the configuration of the whole network: who is connected, what knowledge flows, and where an actor sits in relation to others.</p>
+          <div class="card-grid">
+            <article class="card"><span class="label">Why network?</span><p>Networks help when actors have complementary resources, shared infrastructure or standards, and potential benefits that outweigh the costs of governance. They can reduce uncertainty and transaction costs when full acquisition or arm’s-length purchasing is unsuitable.</p></article>
+            <article class="card"><span class="label">How knowledge flows</span><p>Innovation knowledge moves through complex “social spaghetti”: people communicate with different colleagues, at different rates, about different issues. Cross-functional teams, gatekeepers, communities of practice, and external links help connect those flows.</p></article>
+          </div>
+          <p>As innovation grows more complex, it usually requires more participants, often beyond the firm. This reflects a shift from linear technology-push or demand-pull models toward interactive innovation, supported by communication technologies and boundary-spanning work.</p>
+          <div class="callout"><strong>Network fit:</strong> A network is useful when collaboration, shared learning, and access to complementary assets create enough value to justify the effort of maintaining the relationships.</div>
+        </section>
+        <section id="network-types">
+          <h2>2 · Different forms serve different purposes</h2>
+          <p>Networks may emerge from shared interests and interdependence, or be deliberately engineered by a firm or broker. They also differ in openness: closed networks can protect proprietary standards and lock in participants, while open arrangements invite broader exchange.</p>
+          <div class="table-wrap"><table><thead><tr><th>Network form</th><th>Purpose</th></tr></thead><tbody>
+            <tr><td>Entrepreneur networks</td><td>Bring together complementary resources, advice, mentoring, and support to advance an opportunity.</td></tr>
+            <tr><td>Internal teams and employee networks</td><td>Cross organizational boundaries to combine skills, surface employee ideas, and support internal ventures.</td></tr>
+            <tr><td>Communities of practice</td><td>Connect people who share a concern or area of knowledge, sometimes across organizations.</td></tr>
+            <tr><td>Clusters and sector networks</td><td>Use geographic proximity or a shared industry to enable exchange, collaboration, and competitiveness.</td></tr>
+            <tr><td>Development consortia</td><td>Share knowledge to create products, processes, technologies, or emerging standards.</td></tr>
+            <tr><td>User and open innovation networks</td><td>Bring external users and knowledge sources into innovation; innovation markets and crowdfunding can extend the model to solutions, resources, or judgement.</td></tr>
+          </tbody></table></div>
+          <p>Networks have their own activity cycles and can be unstable as members, interests, or conditions change. Virtual networks can speed information exchange, including supply-chain coordination and customer processing.</p>
+        </section>
+        <section id="value">
+          <h2>3 · Create value together—and scale it</h2>
+          <p>Networks can provide access to diverse and complementary knowledge, share risks, open markets and technologies, and pool skills and assets. They also support shared learning: organizations can adapt practices developed elsewhere rather than reinventing them alone. Supply-chain learning, regional clusters, and precompetitive research consortia are common examples.</p>
+          <div class="card-grid three">
+            <article class="card"><span class="label">Combine</span><p>Bring distinct expertise and assets together to create a solution no participant could readily produce alone.</p></article>
+            <article class="card"><span class="label">Learn</span><p>Share experience, experiment, and adapt effective practices across organizations and communities.</p></article>
+            <article class="card"><span class="label">Scale</span><p>Coordinate the wider system needed to move a successful pilot toward sustained market or social impact.</p></article>
+          </div>
+          <p>Scaling innovation is a long-term, multi-player challenge. Value-network analysis helps map the roles involved: value creators develop new value; consumers use it; captors receive value; conveyors add value in development or delivery; channels provide infrastructure; coordinators connect participants; cartographers shape markets; competitors vie for consumer attention; and complementors enhance the offering.</p>
+          <div class="callout"><strong>Emergent value:</strong> A network’s combined effects can exceed the sum of individual contributions, but only when organizing energy helps participants coordinate and sustain the work.</div>
+        </section>
+        <section id="open-innovation">
+          <h2>4 · Open innovation connects knowledge across boundaries</h2>
+          <p>Open innovation means deliberately searching beyond organizational boundaries and managing knowledge flows into and out of the firm. It rests on the idea that useful expertise is distributed: not all the smart people work for one organization. Firms may use external ideas, license or share technology, partner in development, or bring user knowledge into their process.</p>
+          <div class="card-grid">
+            <article class="card"><h3>Inbound flows</h3><p>Look outside for ideas, technologies, user insights, and expertise that can strengthen internal innovation.</p></article>
+            <article class="card"><h3>Outbound flows</h3><p>Find routes for internally developed knowledge that the firm cannot or will not exploit alone, including licensing and partnerships.</p></article>
+          </div>
+          <p>Intermediaries and brokers can bridge organizations, connect problems with solutions, and help partners navigate unfamiliar knowledge or markets. Established relationships support incremental improvement, but they can also narrow attention; “the ties that bind” may become “the ties that blind.”</p>
+        </section>
+        <section id="partnering">
+          <h2>5 · Find, form, and develop new partnerships</h2>
+          <p>Building a new network involves two distinct tasks: <b>finding</b> relevant partners and <b>forming</b> relationships with them. Finding concerns the breadth of search and ability to see beyond familiar industry assumptions. Forming concerns whether prospective partners are willing to engage and whether the relationship offers mutual benefit.</p>
+          <div class="table-wrap"><table><thead><tr><th>Barrier</th><th>Challenge</th></tr></thead><tbody>
+            <tr><td>Geographical</td><td>Distance and cultural differences make opportunities in unfamiliar places harder to identify and assess.</td></tr>
+            <tr><td>Technological</td><td>Opportunities can arise at the intersection of technology domains that rarely interact.</td></tr>
+            <tr><td>Institutional</td><td>Different origins and objectives, such as public and private sector priorities, can inhibit connection.</td></tr>
+            <tr><td>Ideological</td><td>Different values and norms can obscure opportunities or create friction between partners.</td></tr>
+            <tr><td>Demographic and ethnic</td><td>Differences in needs, values, and cultural experience can impede trust and collaboration.</td></tr>
+          </tbody></table></div>
+          <p>A useful diagnostic combines partner <b>visibility</b> (easy or difficult to find) with partner <b>willingness</b> (ready or reluctant to engage). Easy-to-find, willing partners are relatively straightforward; hard-to-find partners require broader search; reluctant partners require work on mutual value and trust; and partners who are both hard to find and reluctant require sustained relationship-building.</p>
+          <div class="callout"><strong>Practical sequence:</strong> Search beyond familiar circles, assess the fit and barriers, build a relationship around mutual benefit, then develop the link into a high-performing partnership.</div>
+        </section>
+        <section id="management">
+          <h2>6 · Manage the network, not only the firm</h2>
+          <p>Network management calls for skills beyond managing owned resources. A network shapes behavior through information flows and through the power differences created by participants’ positions. The challenge is to see system-level effects, maintain shared purpose, and coordinate actors whose interests do not fully align.</p>
+          <div class="card-grid">
+            <article class="card"><span class="label">Conditions that help</span><p>High-performing innovation networks are diverse, proactively managed, and supported by gatekeepers who broker knowledge. Financial leverage and access to investors can distribute risk and provide market intelligence.</p></article>
+            <article class="card"><span class="label">Tensions to handle</span><p>Build trust and shared risk-taking without excessive contractual friction; address free riders and knowledge spillovers; and prevent narrow self-interest from undermining collective outcomes.</p></article>
+          </div>
+          <p>Different network settings call for different management approaches. Similar partners pursuing tactical improvements may need light coordination; diverse partners working on new concepts need active brokering, relationship-building, and shared expectations.</p>
+        </section>
+        <section id="terms">
+          <h2>Key terms</h2>
+          <dl class="term-list">
+            <div><dt>Node and link</dt><dd>An actor in a network and the relationship or interaction connecting actors.</dd></div>
+            <div><dt>Emergent network</dt><dd>A network that forms through interdependence or shared interests.</dd></div>
+            <div><dt>Engineered network</dt><dd>A network deliberately assembled and developed by a focal organization or broker.</dd></div>
+            <div><dt>Open innovation</dt><dd>Managing knowledge flows across organizational boundaries to advance innovation.</dd></div>
+            <div><dt>Gatekeeper</dt><dd>A person or organization that connects participants to knowledge and expertise across boundaries.</dd></div>
+            <div><dt>Value network</dt><dd>The connected set of roles and relationships that jointly creates and delivers value.</dd></div>
+            <div><dt>Free rider</dt><dd>A participant who benefits from collective activity without contributing fairly.</dd></div>
+            <div><dt>Knowledge spillover</dt><dd>Knowledge that flows beyond the intended boundary or recipient, sometimes unintentionally.</dd></div>
+          </dl>
+        </section>
+        <section id="practice">
+          <h2>Review questions</h2>
+          <details><summary>Why is innovation increasingly described as a networked process?</summary><p>Complex innovation combines knowledge and assets held by many actors. Networks connect these sources and support interactive learning across and beyond firms.</p></details>
+          <details><summary>When is a network preferable to relying only on markets or hierarchy?</summary><p>When complementary capabilities, shared infrastructure, learning, and uncertainty make collaboration more valuable than arm’s-length transactions or full ownership, after governance costs are considered.</p></details>
+          <details><summary>How do open innovation and user networks change the firm’s role?</summary><p>The firm becomes a manager of knowledge flows and relationships, actively drawing on external ideas and users rather than treating its boundary as the limit of innovation.</p></details>
+          <details><summary>What are the two tasks involved in creating new networks?</summary><p>Finding relevant partners and forming relationships with them; each faces different barriers and requires different capabilities.</p></details>
+          <details><summary>What tensions must network managers balance?</summary><p>Collective system value and individual interests, openness and knowledge protection, trust and formal controls, plus contribution and free riding.</p></details>
+        </section>
+      </div>
+    </div></main>
+    <footer><div class="footer-nav"><a href="index.html">← All study guides</a></div>MGT6705 · Managing Innovation · Chapter 8</footer>
+  </body>
+</html>
